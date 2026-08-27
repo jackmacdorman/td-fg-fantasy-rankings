@@ -28,7 +28,9 @@ best-available chip per position, a **My Team** panel showing starters and bench
 roster tracker counting your picks against the starting requirements.
 
 Filters are multi-select: plain click picks one, **Cmd/Ctrl-click adds or removes**, so you
-can hold RB and WR together in the round where you're choosing between them. Positions
+can hold RB and WR together in the round where you're choosing between them. An active
+position filter takes that position's own colour, matching its pill in the Pos column, so
+a two- or three-position selection reads at a glance. Positions
 union — RB+WR means either — but ★ Flagged is a separate axis and *intersects*, so
 Cmd-clicking RB and the star gives you flagged running backs rather than every RB plus
 every flagged kicker.

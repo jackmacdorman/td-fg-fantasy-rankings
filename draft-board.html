@@ -26,6 +26,18 @@ button{background:#222c40;border:1px solid var(--line);color:var(--txt);
   border-radius:6px;padding:5px 11px;font-size:12.5px;cursor:pointer;font-family:inherit}
 button:hover{background:#2b374f}
 button.on{background:var(--accent);border-color:var(--accent);color:#06101f;font-weight:600}
+/* An active position filter takes that position's own colour, so the pill you
+   pressed matches the pills in the Pos column -- green for RB, orange for QB.
+   With multi-select this is what makes a two-position selection readable at a
+   glance. ALL and the star keep the neutral blue: they are not positions and
+   should not borrow a position's meaning. The dark text is inherited from
+   button.on and is the same choice .pos makes over these same six fills. */
+#filters button.on[data-p="QB"]{background:var(--QB);border-color:var(--QB)}
+#filters button.on[data-p="RB"]{background:var(--RB);border-color:var(--RB)}
+#filters button.on[data-p="WR"]{background:var(--WR);border-color:var(--WR)}
+#filters button.on[data-p="TE"]{background:var(--TE);border-color:var(--TE)}
+#filters button.on[data-p="K"]{background:var(--K);border-color:var(--K)}
+#filters button.on[data-p="DST"]{background:var(--DST);border-color:var(--DST)}
 .filters{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px;align-items:center}
 .avail{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
 .chip{background:#0d121c;border:1px solid var(--line);border-radius:6px;
