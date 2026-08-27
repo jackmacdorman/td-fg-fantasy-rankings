@@ -106,6 +106,9 @@ tr.mine:hover td{background:#183524}
 /* Four extra columns squeeze the name cell; without this it wraps to two lines at
    narrower widths and halves how many players fit on screen. */
 .nm{font-weight:600;white-space:nowrap}
+/* The whole cell, not just the name -- the space before the team tag was a
+   wrap opportunity, so "Amon-Ra St. Brown DET" broke to two lines on its own. */
+.pl{white-space:nowrap}
 .tm{color:var(--dim);font-size:12px}
 .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .vor{font-weight:700}
@@ -114,7 +117,12 @@ tr.mine:hover td{background:#183524}
 td.cat{color:#aebbd1}
 th.cat{color:#6f7d97}
 .zero{color:#39435a}
-.note{color:var(--dim);font-size:12px;max-width:640px}
+/* One line, clipped, full text on hover. Left to wrap, a long trap explanation
+   grew its row to 170px against a 33px baseline -- five ordinary rows' worth of
+   screen for one note, which is the opposite of what you want while a draft is
+   running. The text is still there, in the title attribute. */
+.note{color:var(--dim);font-size:12px;max-width:min(46vw,560px);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .badge{font-size:9.5px;font-weight:700;letter-spacing:.4px;padding:1px 5px;
   border-radius:3px;margin-right:6px;vertical-align:1px}
 .badge.sleeper{background:#1c4a2e;color:#7ee2a8}
@@ -153,11 +161,12 @@ tr.mine .mineBtn{border-color:#5ad18f;color:#5ad18f}
   <table>
     <thead><tr>
       <th data-k="r">#</th><th data-k="p">Pos</th><th data-k="n">Player</th>
+      <th data-k="pts" class="num" title="Total projected fantasy points. The category columns to the right are what it is made of.">Pts</th>
       <th data-k="ptd" class="num cat" title="Projected passing TDs (3 pts each)">Pass&nbsp;TD</th>
       <th data-k="td" class="num cat" title="Projected rushing + receiving TDs, and D/ST return TDs (6 pts each)">TD</th>
       <th data-k="fg" class="num cat" title="Projected field goals made, all distances (3 pts each)">FG</th>
       <th data-k="xp" class="num cat" title="Projected extra points made (1 pt each)">XP</th>
-      <th data-k="pts" class="num">Pts</th><th data-k="vor" class="num">Adj VOR</th>
+      <th data-k="vor" class="num" title="Adjusted value over replacement -- how many points this player beats a freely available player at his own position by, discounted for how much of that edge is real. This is what the board is sorted by.">Adj&nbsp;VOR</th>
       <th data-k="c">Conf</th><th>Notes</th><th></th>
     </tr></thead>
     <tbody id="tb"></tbody>
@@ -200,18 +209,20 @@ function makeRow(pl){
   tr.className="row" + (pl.tag?` t-${pl.tag}`:"");
   const badge = pl.tag?`<span class="badge ${pl.tag}">${pl.tag.toUpperCase()}</span>`:"";
   const note = pl.tagwhy || pl.note || "";
+  // Clipped to one line in CSS, so the full text has to live somewhere reachable.
+  const noteAttr = note.replace(/"/g, "&quot;");
   tr.innerHTML=`
     <td class="num" style="color:var(--dim)">${pl.r}</td>
     <td><span class="pos" style="background:var(--${pl.p})">${pl.pr}</span></td>
-    <td><span class="nm">${pl.n}</span> <span class="tm">${pl.t}</span></td>
+    <td class="pl"><span class="nm">${pl.n}</span> <span class="tm">${pl.t}</span></td>
+    <td class="num">${pl.pts.toFixed(1)}</td>
     <td class="num cat">${stat(pl.ptd)}</td>
     <td class="num cat">${stat(pl.td)}</td>
     <td class="num cat">${stat(pl.fg)}</td>
     <td class="num cat">${stat(pl.xp)}</td>
-    <td class="num">${pl.pts.toFixed(1)}</td>
     <td class="num vor">${pl.vor.toFixed(1)}</td>
     <td><span class="conf ${pl.c}">${pl.c}</span></td>
-    <td class="note">${badge}${note}</td>
+    <td class="note" title="${noteAttr}">${badge}${note}</td>
     <td><button class="mineBtn" title="Draft to my team">mine</button></td>`;
   tr.onclick=e=>{
     if(e.target.classList.contains("mineBtn")){
@@ -322,6 +333,14 @@ render();
 </html>
 """
 
-out = ROOT / "draft-board.html"
-out.write_text(HTML.replace("__DATA__", DATA).replace("__META__", META), encoding="utf-8")
-print(f"wrote {out}  ({len(players)} players, {out.stat().st_size // 1024} KB)")
+page = HTML.replace("__DATA__", DATA).replace("__META__", META)
+
+# index.html is what GitHub Pages serves at the bare repo URL, so it has to exist
+# under that name. draft-board.html is kept as a byte-identical copy purely so the
+# old local path and any existing bookmark keep working -- both are generated here
+# rather than one being a stale hand-copy of the other.
+for name in ("index.html", "draft-board.html"):
+    out = ROOT / name
+    out.write_text(page, encoding="utf-8")
+print(f"wrote index.html + draft-board.html  ({len(players)} players, "
+      f"{(ROOT / 'index.html').stat().st_size // 1024} KB)")
