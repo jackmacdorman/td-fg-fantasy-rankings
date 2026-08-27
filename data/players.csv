@@ -1,0 +1,289 @@
+name,team,pos,pass_td,rush_td,rec_td,fg,pat,dst_td,safety,confidence,source,notes
+Josh Allen,BUF,QB,27,12,,,,,,HIGH,Vegas O24.5 pass TD + 7 proj sources,TIER OF ONE. 12 rush TDs alone outscore 20 of 40 QBs in total
+Jalen Hurts,PHI,QB,24,8.5,,,,,,HIGH,7 proj sources,Tush push survived 2026 rules vote; goal-line sneak intact
+Joe Burrow,CIN,QB,33,1.5,,,,,,HIGH,6 proj sources,Volume passer; CIN 26.0 implied pts
+Drake Maye,NE,QB,28,4,,,,,,HIGH,6 proj sources,NE 10.5 win total
+Trevor Lawrence,JAX,QB,26,4.5,,,,,,HIGH,6 proj sources,
+Matthew Stafford,LAR,QB,34,0.5,,,,,,HIGH,6 proj sources,LAR highest implied pts 26.6 but zero rush value
+Dak Prescott,DAL,QB,30.5,2,,,,,,HIGH,Vegas O27.5 pass TD + 5 proj,
+Jaxson Dart,NYG,QB,22,6,,,,,,HIGH,6 proj sources,BIGGEST ADP ARBITRAGE. But new HC Harbaugh may curb rushing
+Brock Purdy,SF,QB,27,3.5,,,,,,HIGH,6 proj sources,
+Lamar Jackson,BAL,QB,26.5,3.5,,,,,,HIGH,6 proj sources,BAL 11.5 win total
+Jayden Daniels,WAS,QB,23.5,5,,,,,,HIGH,6 proj sources,
+Bo Nix,DEN,QB,26.5,3.5,,,,,,HIGH,5 proj sources,
+Caleb Williams,CHI,QB,27,3,,,,,,HIGH,6 proj sources,
+Justin Herbert,LAC,QB,27.5,2.5,,,,,,HIGH,Vegas O22.5 pass TD + 4 proj,
+Patrick Mahomes,KC,QB,26,3,,,,,,MEDIUM,5 proj sources,INJURY RISK: torn ACL+LCL 2025; no preseason snaps
+Jared Goff,DET,QB,30,0.5,,,,,,MEDIUM,5 proj sources,DET 26.1 implied pts; no rush value
+Daniel Jones,IND,QB,21,5,,,,,,MEDIUM,4 proj sources,VALUE: Clay 6 rush TD Razzball 7.3; nobody drafts him for that
+Tyler Shough,NO,QB,21.5,4.5,,,,,,HIGH,4 proj sources,
+Jordan Love,GB,QB,26.5,1.5,,,,,,HIGH,4 proj sources,
+Baker Mayfield,TB,QB,25.5,1.5,,,,,,MEDIUM,4 proj sources,
+Sam Darnold,SEA,QB,26,1,,,,,,HIGH,4 proj sources,
+Kyler Murray,MIN,QB,21.5,3,,,,,,MEDIUM,4 proj sources,Named Week 1 starter over McCarthy
+Bryce Young,CAR,QB,21.5,2.5,,,,,,MEDIUM,4 proj sources,
+C.J. Stroud,HOU,QB,22.5,1.5,,,,,,HIGH,Vegas U22.5 pass TD + 4 proj,Vegas is fading him
+Aaron Rodgers,PIT,QB,22,1,,,,,,MEDIUM,4 proj sources,
+Geno Smith,NYJ,QB,19.5,1.5,,,,,,MEDIUM,4 proj sources,NYJ lowest implied total 18.4
+Malik Willis,MIA,QB,14,4,,,,,,LOW,4 proj sources disagree wildly,LOTTERY TICKET: Yahoo proj 7 rush TD Razzball 2.8
+Cam Ward,TEN,QB,18.5,1.5,,,,,,MEDIUM,4 proj sources,
+Jacoby Brissett,ARI,QB,18,1,,,,,,MEDIUM,4 proj sources,ARI 3.5 win total worst in NFL
+Fernando Mendoza,LV,QB,13,1.5,,,,,,LOW,4 proj sources,Rookie No.1 overall; Cousins starts Week 1 but handoff expected
+Shedeur Sanders,CLE,QB,11,1.5,,,,,,LOW,3 proj sources,Watson named starter but Clay projects Sanders more volume
+Tua Tagovailoa,ATL,QB,12,0,,,,,,LOW,4 proj sources,ATL QB job unsettled; no rush value either way
+Deshaun Watson,CLE,QB,10,1,,,,,,LOW,4 proj sources,Named Week 1 starter; sources conflict badly
+Michael Penix Jr.,ATL,QB,8,1,,,,,,LOW,4 proj sources,Recovering from torn ACL not fully cleared
+Justin Fields,KC,QB,1,1,,,,,,LOW,3 proj sources,BEST HANDCUFF IN FORMAT: rushing QB behind Mahomes ACL recovery
+Kirk Cousins,LV,QB,6,0,,,,,,LOW,4 proj sources,
+J.J. McCarthy,MIN,QB,3,1,,,,,,LOW,3 proj sources,Lost job to Murray
+Jahmyr Gibbs,DET,RB,,13.4,3.8,,,,,HIGH,VEGAS 4.5 rec + DK lead +500 + 3 proj,Overall RB1
+Jonathan Taylor,IND,RB,,12.2,1.3,,,,,HIGH,VEGAS 11.5 rush TD + 3 proj,True goal-line back
+Christian McCaffrey,SF,RB,,9.0,4.4,,,,,HIGH,VEGAS 4.5 rec + 3 proj,Goal-line yes
+Derrick Henry,BAL,RB,,12.8,0.6,,,,,HIGH,VEGAS 12.5 rush TD + 3 proj,Vegas HIGHER than consensus here
+James Cook III,BUF,RB,,10.8,1.8,,,,,HIGH,VEGAS 10.5 rush TD + 3 proj,Allen vulture tax already priced into line
+Josh Jacobs,GB,RB,,11.3,1.3,,,,,HIGH,DK lead +900 + 3 proj,Goal-line yes
+Bijan Robinson,ATL,RB,,8.7,3.3,,,,,HIGH,VEGAS 3.5 rec + 3 proj,CAUTION only 48 pct of inside-5 carries in 2025
+Kyren Williams,LAR,RB,,10.1,1.8,,,,,HIGH,VEGAS 9.5 rush TD + 2 proj,Alternates drives with Corum
+Javonte Williams,DAL,RB,,10.6,1.2,,,,,HIGH,VEGAS 9.5 rush TD + 2 proj,Goal-line yes
+Omarion Hampton,LAC,RB,,9.2,1.9,,,,,HIGH,2 proj sources,Goal-line yes
+Chase Brown,CIN,RB,,7.4,3.6,,,,,HIGH,VEGAS 5.5 rush TD + 3 proj,Vegas LOWER than consensus
+Saquon Barkley,PHI,RB,,8.6,2.1,,,,,HIGH,DK lead +1600 + 3 proj,TRAP: Hurts vultures 8.5 rush TDs; not priced in
+Kenneth Walker III,KC,RB,,8.9,1.6,,,,,HIGH,3 proj sources,New to KC; no established GL hierarchy
+Ashton Jeanty,LV,RB,,7.0,2.0,,,,,HIGH,2 proj sources,Goal-line yes
+De'Von Achane,MIA,RB,,5.7,3.3,,,,,HIGH,VEGAS 5.5 rush TD + 3 proj,Not the goal-line back
+Jeremiyah Love,ARI,RB,,6.8,2.1,,,,,HIGH,2 proj sources,Rookie; opened camp as RB2 behind Allgeier
+Breece Hall,NYJ,RB,,6.3,2.4,,,,,MEDIUM,2 proj sources,Groin strain Aug 17; expected Week 1
+Jadarian Price,SEA,RB,,7.5,1.1,,,,,HIGH,2 proj sources,Rookie; leads while Charbonnet rehabs
+Cam Skattebo,NYG,RB,,7.4,1.2,,,,,HIGH,2 proj sources,Goal-line yes
+D'Andre Swift,CHI,RB,,7.5,1.1,,,,,HIGH,2 proj sources,
+Rhamondre Stevenson,NE,RB,,6.9,1.6,,,,,HIGH,2 proj sources,Goal-line yes
+Bhayshul Tuten,JAX,RB,,6.8,1.7,,,,,HIGH,2 proj sources,But Rodriguez owns goal line
+Bucky Irving,TB,RB,,6.2,1.9,,,,,HIGH,2 proj sources,TRAP: ZERO carries inside the 5 in 2025
+Quinshon Judkins,CLE,RB,,7.2,0.8,,,,,HIGH,2 proj sources,Goal-line yes
+TreVeyon Henderson,NE,RB,,6.8,1.2,,,,,HIGH,2 proj sources,Not the goal-line back
+David Montgomery,HOU,RB,,7.0,0.8,,,,,HIGH,VEGAS 7.5 rush TD + 2 proj,Traded DET to HOU
+J.K. Dobbins,DEN,RB,,6.8,0.9,,,,,HIGH,2 proj sources,Goal-line yes
+Travis Etienne Jr.,NO,RB,,5.6,2.0,,,,,HIGH,2 proj sources,Traded JAX to NO
+Jacory Croskey-Merritt,WAS,RB,,7.2,0.3,,,,,HIGH,2 proj sources,Goal-line yes but rookie Kaytron Allen vultures
+Blake Corum,LAR,RB,,6.7,0.3,,,,,HIGH,2 proj sources,Alternates drives with Kyren
+Rachaad White,WAS,RB,,5.0,1.9,,,,,HIGH,2 proj sources,Signed TB to WAS
+Jaylen Warren,PIT,RB,,4.8,1.8,,,,,HIGH,2 proj sources,True 50-50 with Dowdle
+Rico Dowdle,PIT,RB,,5.2,1.1,,,,,HIGH,2 proj sources,True 50-50 with Warren
+Chuba Hubbard,CAR,RB,,4.9,1.2,,,,,MEDIUM,2 proj sources,
+Tony Pollard,TEN,RB,,5.2,0.8,,,,,HIGH,2 proj sources,
+Kyle Monangai,CHI,RB,,5.2,0.7,,,,,MEDIUM,2 proj sources,
+Jordan Mason,MIN,RB,,5.7,0.1,,,,,HIGH,VEGAS 4.5 rush TD + 2 proj,Goal-line yes; Vegas lower than consensus
+RJ Harvey,DEN,RB,,3.0,2.8,,,,,HIGH,2 proj sources,
+Kenny Gainwell,TB,RB,,3.8,2.0,,,,,HIGH,2 proj sources,
+Zach Charbonnet,SEA,RB,,5.0,0.7,,,,,MEDIUM,2 proj sources disagree,Torn ACL Feb surgery; on PUP; ESPN number too aggressive
+Jonathon Brooks,CAR,RB,,4.2,1.1,,,,,HIGH,2 proj sources,Repeat ACL history
+Aaron Jones Sr.,MIN,RB,,3.1,1.6,,,,,HIGH,2 proj sources,
+Isiah Pacheco,DET,RB,,3.8,0.4,,,,,HIGH,2 proj sources,Signed KC to DET
+Brian Robinson Jr.,ATL,RB,,3.9,0.1,,,,,HIGH,2 proj sources,Vultures Bijan at goal line
+Tyjae Spears,TEN,RB,,2.5,1.3,,,,,HIGH,2 proj sources,
+Chris Rodriguez Jr.,JAX,RB,,3.7,0.1,,,,,HIGH,2 proj sources,SLEEPER: hand-picked by Coen as goal-line back over Tuten
+Woody Marks,HOU,RB,,2.5,1.1,,,,,HIGH,2 proj sources,
+Samaje Perine,CIN,RB,,2.6,0.8,,,,,HIGH,2 proj sources,
+Alvin Kamara,NO,RB,,2.0,1.4,,,,,HIGH,2 proj sources,Declining
+Tyler Allgeier,ARI,RB,,3.1,0.2,,,,,HIGH,2 proj sources,Opened camp ahead of rookie Love
+Tank Bigsby,PHI,RB,,3.2,0.1,,,,,HIGH,2 proj sources,
+Ty Johnson,BUF,RB,,1.6,1.6,,,,,HIGH,2 proj sources,
+MarShawn Lloyd,GB,RB,,2.9,0.3,,,,,HIGH,2 proj sources,
+Braelon Allen,NYJ,RB,,3.0,0.2,,,,,HIGH,2 proj sources,
+Keaton Mitchell,LAC,RB,,2.2,0.9,,,,,HIGH,2 proj sources,
+Justice Hill,BAL,RB,,1.7,1.4,,,,,HIGH,2 proj sources,
+Sean Tucker,TB,RB,,2.7,0.1,,,,,LOW,2 proj sources,BIGGEST SLEEPER: owns TB goal line; scored 8 TD in 2025 6 in final 8 games; projection is a volume artifact
+Dylan Sampson,CLE,RB,,1.1,1.6,,,,,HIGH,2 proj sources,
+Jonah Coleman,DEN,RB,,2.0,0.4,,,,,HIGH,2 proj sources,Rookie GL insurance
+Ray Davis,BUF,RB,,1.6,0.7,,,,,HIGH,2 proj sources,
+Najee Harris,NYG,RB,,2.1,0.2,,,,,HIGH,2 proj sources,Signed to NYG
+Mike Washington Jr.,LV,RB,,2.1,0.1,,,,,HIGH,2 proj sources,Rookie backup to Jeanty
+George Holani,SEA,RB,,1.8,0.1,,,,,HIGH,2 proj sources,
+Tyrone Tracy Jr.,NYG,RB,,1.2,0.7,,,,,HIGH,2 proj sources,
+Kaelon Black,SF,RB,,1.6,0.2,,,,,HIGH,2 proj sources,Rookie
+Kimani Vidal,LAC,RB,,1.6,0.2,,,,,HIGH,2 proj sources,
+Jaydon Blue,DAL,RB,,1.5,0.2,,,,,HIGH,2 proj sources,
+Jaylen Wright,MIA,RB,,1.6,0.1,,,,,HIGH,2 proj sources,
+Emmett Johnson,KC,RB,,1.3,0.2,,,,,HIGH,2 proj sources,Rookie
+Emari Demercado,KC,RB,,1.2,0.3,,,,,HIGH,2 proj sources,
+Ja'Marr Chase,CIN,WR,,0.1,10.9,,,,,HIGH,FFToday + ESPN,
+Davante Adams,LAR,WR,,,10.3,,,,,HIGH,FFToday + ESPN,
+Amon-Ra St. Brown,DET,WR,,0.1,10.2,,,,,HIGH,FFToday + ESPN,
+Puka Nacua,LAR,WR,,0.6,9.3,,,,,HIGH,FFToday + ESPN,
+CeeDee Lamb,DAL,WR,,0.1,8.3,,,,,HIGH,FFToday + ESPN,
+Jaxon Smith-Njigba,SEA,WR,,0.1,8.2,,,,,HIGH,FFToday + ESPN,
+Rashee Rice,KC,WR,,0.3,7.9,,,,,HIGH,FFToday + ESPN,
+Tee Higgins,CIN,WR,,,8.2,,,,,HIGH,FFToday + ESPN,
+Rome Odunze,CHI,WR,,,7.7,,,,,HIGH,FFToday + ESPN,
+George Pickens,DAL,WR,,,7.6,,,,,HIGH,FFToday + ESPN,
+Malik Nabers,NYG,WR,,0.1,7.2,,,,,HIGH,FFToday + ESPN,
+Emeka Egbuka,TB,WR,,0.1,7.2,,,,,HIGH,FFToday + ESPN,
+Courtland Sutton,DEN,WR,,,7.3,,,,,HIGH,FFToday + ESPN,
+Justin Jefferson,MIN,WR,,0.1,7.2,,,,,HIGH,FFToday + ESPN,
+Drake London,ATL,WR,,,7.2,,,,,HIGH,FFToday + ESPN,
+Christian Watson,GB,WR,,0.1,7.0,,,,,HIGH,FFToday + ESPN,
+A.J. Brown,NE,WR,,,7.0,,,,,HIGH,FFToday + ESPN,
+Nico Collins,HOU,WR,,0.1,6.8,,,,,HIGH,FFToday + ESPN,
+Brock Bowers,LV,TE,,0.1,6.8,,,,,HIGH,FFToday + ESPN,
+Chris Olave,NO,WR,,,6.8,,,,,HIGH,FFToday + ESPN,
+Mark Andrews,BAL,TE,,0.3,6.5,,,,,HIGH,FFToday + ESPN,
+D.J. Moore,BUF,WR,,0.2,6.5,,,,,HIGH,FFToday + ESPN,
+Jameson Williams,DET,WR,,0.3,6.3,,,,,HIGH,FFToday + ESPN,
+Mike Evans,SF,WR,,,6.4,,,,,HIGH,FFToday + ESPN,
+Trey McBride,ARI,TE,,,6.2,,,,,HIGH,FFToday + ESPN,
+Ladd McConkey,LAC,WR,,,6.2,,,,,HIGH,FFToday + ESPN,
+DK Metcalf,PIT,WR,,,6.1,,,,,HIGH,FFToday + ESPN,
+Jaylen Waddle,DEN,WR,,0.1,6.0,,,,,HIGH,FFToday + ESPN,
+DeVonta Smith,PHI,WR,,,6.0,,,,,HIGH,FFToday + ESPN,
+Colston Loveland,CHI,TE,,,6.0,,,,,HIGH,FFToday + ESPN,
+Tetairoa McMillan,CAR,WR,,,6.0,,,,,HIGH,FFToday + ESPN,
+Terry McLaurin,WAS,WR,,,6.0,,,,,HIGH,FFToday + ESPN,
+Zay Flowers,BAL,WR,,0.2,5.8,,,,,HIGH,FFToday + ESPN,
+Quentin Johnston,LAC,WR,,0.1,5.8,,,,,HIGH,FFToday + ESPN,
+Dallas Goedert,PHI,TE,,,5.8,,,,,HIGH,FFToday + ESPN,
+Luther Burden III,CHI,WR,,0.2,5.5,,,,,HIGH,FFToday + ESPN,
+Jake Ferguson,DAL,TE,,,5.5,,,,,HIGH,FFToday + ESPN,
+Marvin Harrison Jr.,ARI,WR,,,5.5,,,,,HIGH,FFToday + ESPN,
+Tyler Warren,IND,TE,,0.2,5.2,,,,,HIGH,FFToday + ESPN,
+George Kittle,SF,TE,,,5.3,,,,,HIGH,FFToday + ESPN,
+Romeo Doubs,NE,WR,,,5.2,,,,,HIGH,FFToday + ESPN,
+Hunter Henry,NE,TE,,,5.2,,,,,HIGH,FFToday + ESPN,
+Alec Pierce,IND,WR,,,5.2,,,,,HIGH,FFToday + ESPN,
+Terrance Ferguson,LAR,TE,,,5.2,,,,,HIGH,FFToday + ESPN,
+Sam LaPorta,DET,TE,,,5.2,,,,,HIGH,FFToday + ESPN,
+Jakobi Meyers,JAX,WR,,0.1,5.1,,,,,HIGH,FFToday + ESPN,
+Jordan Addison,MIN,WR,,0.1,5.1,,,,,HIGH,FFToday + ESPN,
+Garrett Wilson,NYJ,WR,,0.1,5.1,,,,,HIGH,FFToday + ESPN,
+Parker Washington,JAX,WR,,0.1,5.1,,,,,HIGH,FFToday + ESPN,
+Brian Thomas Jr.,JAX,WR,,0.1,5.0,,,,,HIGH,FFToday + ESPN,
+Jayden Reed,GB,WR,,0.2,4.7,,,,,HIGH,FFToday + ESPN,
+Matthew Golden,GB,WR,,0.1,4.8,,,,,HIGH,FFToday + ESPN,
+Deebo Samuel Sr.,SF,WR,,1.1,3.7,,,,,LOW,ESPN only,
+Tucker Kraft,GB,TE,,0.1,4.7,,,,,HIGH,FFToday + ESPN,
+Carnell Tate,TEN,WR,,,4.8,,,,,HIGH,FFToday + ESPN,
+Chris Godwin,TB,WR,,,4.8,,,,,HIGH,FFToday + ESPN,
+Dalton Kincaid,BUF,TE,,,4.7,,,,,HIGH,FFToday + ESPN,
+Makai Lemon,PHI,WR,,,4.7,,,,,LOW,ESPN only,
+Xavier Worthy,KC,WR,,0.3,4.3,,,,,HIGH,FFToday + ESPN,
+De'Zhaun Stribling,SF,WR,,,4.5,,,,,LOW,ESPN only,
+Michael Pittman Jr.,PIT,WR,,,4.5,,,,,HIGH,FFToday + ESPN,
+Travis Kelce,KC,TE,,,4.2,,,,,HIGH,FFToday + ESPN,
+Stefon Diggs,WAS,WR,,,4.2,,,,,HIGH,FFToday + ESPN,
+Harold Fannin Jr.,CLE,TE,,0.1,4.1,,,,,HIGH,FFToday + ESPN,
+Jalen McMillan,TB,WR,,0.2,3.9,,,,,LOW,ESPN only,
+Rashod Bateman,BAL,WR,,,4.0,,,,,LOW,ESPN only,
+AJ Barner,SEA,TE,,0.2,3.8,,,,,HIGH,FFToday + ESPN,
+Rashid Shaheed,SEA,WR,,0.5,3.5,,,,,LOW,ESPN only,
+Khalil Shakir,BUF,WR,,0.1,3.9,,,,,HIGH,FFToday + ESPN,
+Brenton Strange,JAX,TE,,,4.0,,,,,HIGH,FFToday + ESPN,
+Darren Waller,CAR,TE,,,4.0,,,,,HIGH,FFToday + ESPN,
+Isaiah Likely,NYG,TE,,,4.0,,,,,HIGH,FFToday + ESPN,
+Mike Gesicki,CIN,TE,,,3.9,,,,,HIGH,FFToday + ESPN,
+Pat Freiermuth,PIT,TE,,,3.9,,,,,MEDIUM,FFToday + ESPN,
+Michael Wilson,ARI,WR,,,3.7,,,,,HIGH,FFToday + ESPN,
+Adonai Mitchell,NYJ,WR,,0.1,3.6,,,,,LOW,ESPN only,
+Calvin Ridley,TEN,WR,,0.2,3.4,,,,,LOW,ESPN only,
+Kyle Pitts,ATL,TE,,,3.6,,,,,HIGH,FFToday + ESPN,
+David Njoku,LAC,TE,,,3.5,,,,,HIGH,FFToday + ESPN,
+Ja'Kobi Lane,BAL,WR,,,3.5,,,,,LOW,ESPN only,
+Josh Downs,IND,WR,,0.1,3.4,,,,,HIGH,FFToday + ESPN,
+Devaughn Vele,NO,WR,,,3.4,,,,,LOW,ESPN only,
+Travis Hunter,JAX,WR,,0.1,3.3,,,,,LOW,ESPN only,
+KC Concepcion,CLE,WR,,0.2,3.1,,,,,LOW,ESPN only,
+Jauan Jennings,MIN,WR,,,3.3,,,,,LOW,ESPN only,
+Isaac TeSlaa,DET,WR,,,3.2,,,,,LOW,ESPN only,
+Jalen Nailor,LV,WR,,0.1,3.0,,,,,LOW,ESPN only,
+Gunnar Helm,TEN,TE,,,3.1,,,,,HIGH,FFToday + ESPN,
+Tyquan Thornton,KC,WR,,,3.0,,,,,LOW,ESPN only,
+Jalen Coker,CAR,WR,,,3.0,,,,,LOW,ESPN only,
+Chigoziem Okonkwo,WAS,TE,,,3.0,,,,,LOW,FFToday only,
+Kenyon Sadiq,NYJ,TE,,,3.0,,,,,HIGH,FFToday + ESPN,
+Dalton Schultz,HOU,TE,,,3.0,,,,,HIGH,FFToday + ESPN,
+Denzel Boston,CLE,WR,,,3.0,,,,,LOW,ESPN only,
+Colby Parkinson,LAR,TE,,,3.0,,,,,HIGH,FFToday + ESPN,
+Greg Dulcich,MIA,TE,,,2.9,,,,,MEDIUM,FFToday + ESPN,
+Dontayvion Wicks,PHI,WR,,,2.9,,,,,LOW,ESPN only,
+Juwan Johnson,NO,TE,,,2.9,,,,,HIGH,FFToday + ESPN,
+T.J. Hockenson,MIN,TE,,,2.9,,,,,HIGH,FFToday + ESPN,
+Germie Bernard,PIT,WR,,0.1,2.8,,,,,LOW,ESPN only,
+Dawson Knox,BUF,TE,,,2.9,,,,,HIGH,FFToday + ESPN,
+Ryan Flournoy,DAL,WR,,0.1,2.7,,,,,LOW,ESPN only,
+Keon Coleman,BUF,WR,,,2.8,,,,,LOW,ESPN only,
+Tre Tucker,LV,WR,,0.3,2.5,,,,,LOW,ESPN only,
+Cooper Kupp,SEA,WR,,,2.8,,,,,LOW,ESPN only,
+Kayshon Boutte,HOU,WR,,,2.8,,,,,LOW,ESPN only,
+Jerry Jeudy,CLE,WR,,,2.7,,,,,LOW,ESPN only,
+Keenan Allen,IND,WR,,,2.7,,,,,LOW,ESPN only,
+Jordyn Tyson,NO,WR,,,2.7,,,,,LOW,ESPN only,
+Xavier Legette,CAR,WR,,0.1,2.6,,,,,LOW,ESPN only,
+Jaylin Noel,HOU,WR,,0.1,2.5,,,,,LOW,ESPN only,
+Wan'Dale Robinson,TEN,WR,,0.1,2.5,,,,,HIGH,FFToday + ESPN,
+Tank Dell,HOU,WR,,0.2,2.4,,,,,LOW,ESPN only,
+Tre' Harris,LAC,WR,,,2.5,,,,,LOW,ESPN only,
+Antonio Williams,WAS,WR,,0.2,2.3,,,,,LOW,ESPN only,
+Omar Cooper Jr.,NYJ,WR,,0.1,2.2,,,,,LOW,ESPN only,
+Jahan Dotson,ATL,WR,,,2.3,,,,,LOW,ESPN only,
+Jason Myers,SEA,K,,,,39,50,,,HIGH,CBS 2026 proj,Led NFL 43 FGM 2025 on 48 FGA
+Ka'imi Fairbairn,HOU,K,,,,39,39,,,HIGH,CBS 2026 proj,Best FG-lean in league; HOU led NFL 52 FGA
+Brandon Aubrey,DAL,K,,,,35,49,,,HIGH,CBS + FantasyPros agree,
+Blake Grupe,IND,K,,,,34,51,,,MEDIUM,CBS 2026 proj,Shrader listed as backup
+Cameron Dicker,LAC,K,,,,35,38,,,HIGH,CBS 2026 proj,92.7 pct in 2025; strong FG lean
+Jake Bates,DET,K,,,,31,53,,,HIGH,CBS 2026 proj,XP-heavy; TD offense caps him
+Cairo Santos,CHI,K,,,,32,47,,,HIGH,CBS 2026 proj,39 FGA in 2025
+Will Reichard,MIN,K,,,,33,42,,,HIGH,CBS 2026 proj,94.3 pct in 2025
+Chase McLaughlin,TB,K,,,,33,42,,,HIGH,CBS 2026 proj,
+Harrison Mevis,LAR,K,,,,29,55,,,MEDIUM,CBS 2026 proj,Most TD-heavy K; LAR led NFL RZ trips
+Harrison Butker,KC,K,,,,33,35,,,HIGH,CBS 2026 proj,Strong FG lean
+Tyler Loop,BAL,K,,,,29,49,,,MEDIUM,CBS 2026 proj,Year 2; BAL 11.5 win total
+Cam Little,JAX,K,,,,29,48,,,HIGH,CBS 2026 proj,
+Wil Lutz,DEN,K,,,,30,44,,,HIGH,CBS 2026 proj,
+Evan McPherson,CIN,K,,,,29,47,,,HIGH,CBS 2026 proj,Only 28 FGA in 2025
+Eddy Pineiro,SF,K,,,,31,37,,,MEDIUM,CBS 2026 proj,
+Nick Folk,ATL,K,,,,30,41,,,MEDIUM,CBS 2026 proj,Age risk
+Daniel Carlson,NO,K,,,,30,37,,,LOW,Estimate; signed 8/24/26,Published projections stale (built on Smyth); NO 42 FGA at 71.4 pct = upside
+Trey Smack,GB,K,,,,29,38,,,LOW,CBS 2026 proj,Rookie 6th rounder
+Jason Sanders,NYJ,K,,,,29,35,,,HIGH,CBS 2026 proj,Won job; York waived
+Tyler Bass,BUF,K,,,,26,46,,,MEDIUM,CBS 2026 proj,TRAP: BUF had fewest FGA in NFL (21) in 2025
+Joey Slye,TEN,K,,,,29,34,,,MEDIUM,CBS 2026 proj,
+Andres Borregales,NE,K,,,,26,42,,,MEDIUM,CBS 2026 proj,
+Drew Stevens,WAS,K,,,,27,39,,,LOW,CBS 2026 proj,Rookie
+Riley Patterson,MIA,K,,,,27,38,,,LOW,CBS 2026 proj,Zane Gonzalez on roster
+Jake Elliott,PHI,K,,,,26,41,,,MEDIUM,CBS 2026 proj,74.1 pct in 2025 (worst); PHI best RZ TD pct
+Chad Ryland,ARI,K,,,,26,37,,,MEDIUM,CBS 2026 proj,ARI 4.5 win total
+Giants Kicker,NYG,K,,,,27,34,,,LOW,CBS 2026 proj,Open battle Sauls vs Zvada; avoid
+Chris Boswell,PIT,K,,,,25,36,,,MEDIUM,CBS 2026 proj,
+Ryan Fitzgerald,CAR,K,,,,24,34,,,LOW,CBS 2026 proj,
+Matt Gay,LV,K,,,,23,32,,,MEDIUM,CBS 2026 proj,LV 5.5 win total
+Andre Szmyt,CLE,K,,,,23,32,,,LOW,CBS 2026 proj,CLE 7.8 win total
+Seahawks D/ST,SEA,DST,,,,,,3.47,0.50,MEDIUM,Model est. on NFL.com 3yr,Only team with 3+ def TD all 3 yrs; Tory Horton PR
+Cowboys D/ST,DAL,DST,,,,,,3.14,0.45,MEDIUM,Model est. on NFL.com 3yr,KaVontae Turpin led NFL KR yds 2025
+Texans D/ST,HOU,DST,,,,,,2.79,0.65,MEDIUM,Model est. on NFL.com 3yr,3 FR TD in 2025; elite pass rush; weak returns
+Browns D/ST,CLE,DST,,,,,,2.79,0.60,MEDIUM,Model est. on NFL.com 3yr,3 INT TD on only 11 INTs; bad offense = more snaps
+Broncos D/ST,DEN,DST,,,,,,2.77,0.65,MEDIUM,Model est. on NFL.com 3yr,Marvin Mims led PR yds 2025
+Vikings D/ST,MIN,DST,,,,,,2.77,0.60,MEDIUM,Model est. on NFL.com 3yr,Led NFL forced fumbles 2025
+Bills D/ST,BUF,DST,,,,,,2.77,0.50,MEDIUM,Model est. on NFL.com 3yr,Consistent 2-3 def TD/yr
+Jaguars D/ST,JAX,DST,,,,,,2.63,0.55,MEDIUM,Model est. on NFL.com 3yr,Parker Washington 3 PR TD in 2 yrs
+Falcons D/ST,ATL,DST,,,,,,2.60,0.50,MEDIUM,Model est. on NFL.com 3yr,4 def TD in 2024; Branch return upside
+Patriots D/ST,NE,DST,,,,,,2.47,0.50,MEDIUM,Model est. on NFL.com 3yr,Marcus Jones 2 PR TD 2025; best PR unit
+Steelers D/ST,PIT,DST,,,,,,2.45,0.60,MEDIUM,Model est. on NFL.com 3yr,3 def TD 2025
+Raiders D/ST,LV,DST,,,,,,2.45,0.55,LOW,Model est. on NFL.com 3yr,5 def TD in 2023 then 1 then 0
+Colts D/ST,IND,DST,,,,,,2.45,0.50,MEDIUM,Model est. on NFL.com 3yr,
+Ravens D/ST,BAL,DST,,,,,,2.43,0.55,MEDIUM,Model est. on NFL.com 3yr,Steady 1-2/yr
+Bears D/ST,CHI,DST,,,,,,2.43,0.50,MEDIUM,Model est. on NFL.com 3yr,Led NFL 23 INTs 2025
+Jets D/ST,NYJ,DST,,,,,,2.30,0.45,LOW,Model est. on NFL.com 3yr,Best return duo; defense contributes nothing
+Titans D/ST,TEN,DST,,,,,,2.30,0.40,LOW,Model est. on NFL.com 3yr,Chimere Dike 2 PR TD 2025; pure return play
+New Orleans D/ST,NO,DST,,,,,,2.28,0.45,LOW,Model est. on NFL.com 3yr,3 def TD 2025
+Giants D/ST,NYG,DST,,,,,,2.27,0.60,LOW,Model est. on NFL.com 3yr,Elite pass rush drives safeties
+Bengals D/ST,CIN,DST,,,,,,2.27,0.45,MEDIUM,Model est. on NFL.com 3yr,Charlie Jones KR TD in both 2024 and 2025
+Dolphins D/ST,MIA,DST,,,,,,2.27,0.40,LOW,Model est. on NFL.com 3yr,0 def TD in 2024 AND 2025
+Panthers D/ST,CAR,DST,,,,,,2.12,0.45,LOW,Model est. on NFL.com 3yr,
+Buccaneers D/ST,TB,DST,,,,,,2.12,0.45,MEDIUM,Model est. on NFL.com 3yr,
+Chiefs D/ST,KC,DST,,,,,,2.10,0.50,MEDIUM,Model est. on NFL.com 3yr,0 def TD in 2025; low variance
+Eagles D/ST,PHI,DST,,,,,,2.03,0.60,MEDIUM,Model est. on NFL.com 3yr,TRAP: great real defense but no return game
+49ers D/ST,SF,DST,,,,,,1.95,0.55,MEDIUM,Model est. on NFL.com 3yr,Exactly 1 def TD each of last 3 yrs
+Cardinals D/ST,ARI,DST,,,,,,1.95,0.50,LOW,Model est. on NFL.com 3yr,
+Rams D/ST,LAR,DST,,,,,,1.87,0.50,MEDIUM,Model est. on NFL.com 3yr,Weak returners
+Lions D/ST,DET,DST,,,,,,1.78,0.45,MEDIUM,Model est. on NFL.com 3yr,Only 2 def TD in 3 seasons
+Commanders D/ST,WAS,DST,,,,,,1.77,0.40,LOW,Model est. on NFL.com 3yr,1 def TD in 3 years
+Packers D/ST,GB,DST,,,,,,1.70,0.55,MEDIUM,Model est. on NFL.com 3yr,0 def TD 2025; poor returner
+Chargers D/ST,LAC,DST,,,,,,1.62,0.50,MEDIUM,Model est. on NFL.com 3yr,1 def TD in 3 seasons; 19 INTs to 0 INT TD

@@ -1,0 +1,99 @@
+==== RUSH 52
+Jahmyr Gibbs               implied  9.70  6+:0.86 8+:0.53 10+:0.39 12+:0.41 14+:0.38 16+:0.24
+Derrick Henry              implied  8.50  6+:0.41 8+:0.44 10+:0.41 12+:0.60 14+:0.22 16+:0.15
+Josh Allen                 implied  8.20  6+:0.77 8+:0.48 10+:0.36 12+:0.21 14+:0.15
+James Cook III             implied  8.05  6+:0.84 8+:0.41 10+:0.34 12+:0.20 14+:0.15 16+:0.15
+Omarion Hampton            implied  7.85  6+:0.73 8+:0.57 10+:0.21 12+:0.18 14+:0.11 16+:0.07
+Javonte Williams           implied  7.75  6+:0.76 8+:0.37 10+:0.36 12+:0.17 14+:0.15 16+:0.10
+Kyren Williams             implied  7.70  6+:0.80 8+:0.40 10+:0.27 12+:0.20 14+:0.15
+Kenneth Walker III         implied  7.70  6+:0.71 8+:0.52 10+:0.21 12+:0.21 14+:0.10 16+:0.10
+Saquon Barkley             implied  7.65  6+:0.64 8+:0.57 10+:0.22 12+:0.14 14+:0.10 16+:0.09
+Bijan Robinson             implied  7.45  6+:0.46 8+:0.61 10+:0.27 12+:0.14 14+:0.11 16+:0.10
+Jonathan Taylor            implied  7.25  6+:0.45 8+:0.43 10+:0.38 12+:0.29 14+:0.15 16+:0.15
+David Montgomery           implied  7.20  6+:0.61 8+:0.47 10+:0.20 12+:0.18 14+:0.07
+Christian McCaffrey        implied  7.15  6+:0.73 8+:0.35 10+:0.22 12+:0.17 14+:0.10 16+:0.10
+Josh Jacobs                implied  6.75  6+:0.42 8+:0.43 10+:0.30 12+:0.21 14+:0.14
+Ashton Jeanty              implied  6.75  6+:0.56 8+:0.41 10+:0.18 12+:0.12 14+:0.07 16+:0.07
+Chase Brown                implied  6.30  6+:0.60 8+:0.23 10+:0.21 12+:0.09 14+:0.07 16+:0.07
+Bhayshul Tuten             implied  6.25  6+:0.58 8+:0.28 10+:0.12 12+:0.08
+Quinshon Judkins           implied  5.95  6+:0.45 8+:0.27 10+:0.23 12+:0.10 14+:0.07
+Jaxson Dart                implied  5.70  6+:0.47 8+:0.22 10+:0.14
+Woody Marks                implied  5.60  6+:0.38 8+:0.34 10+:0.07
+TreVeyon Henderson         implied  5.60  6+:0.33 8+:0.35 10+:0.18 12+:0.08 14+:0.07
+Cam Skattebo               implied  5.55  6+:0.43 8+:0.22 10+:0.14 12+:0.07 14+:0.07
+Jeremiyah Love             implied  5.50  6+:0.42 8+:0.20 10+:0.18 12+:0.09 14+:0.07 16+:0.05
+RJ Harvey                  implied  5.40  6+:0.27 8+:0.41 10+:0.13 12+:0.04
+Jadarian Price             implied  5.35  6+:0.40 8+:0.20 10+:0.15 12+:0.09 14+:0.07
+Jacory Croskey-Merritt     implied  5.15  6+:0.38 8+:0.17 10+:0.12
+Rhamondre Stevenson        implied  5.05  6+:0.33 8+:0.21 10+:0.12 12+:0.09
+Blake Corum                implied  5.00  6+:0.34 8+:0.20 10+:0.12
+Travis Etienne Jr.         implied  4.95  6+:0.32 8+:0.18 10+:0.11 12+:0.07 14+:0.07
+Bucky Irving               implied  4.95  6+:0.29 8+:0.23 10+:0.17 12+:0.07 14+:0.04
+Jaylen Warren              implied  4.85  6+:0.33 8+:0.15 10+:0.10 12+:0.07
+Breece Hall                implied  4.85  6+:0.29 8+:0.19 10+:0.16 12+:0.07 14+:0.07 16+:0.04
+Zach Charbonnet            implied  4.80  6+:0.28 8+:0.21 10+:0.12
+Kyle Monangai              implied  4.75  6+:0.28 8+:0.17 10+:0.13
+Isiah Pacheco              implied  4.75  6+:0.28 8+:0.21 10+:0.10
+Tony Pollard               implied  4.70  6+:0.28 8+:0.18 10+:0.10 12+:0.09
+De'Von Achane              implied  4.55  6+:0.24 8+:0.20 10+:0.16 12+:0.06 14+:0.07 16+:0.03
+Chuba Hubbard              implied  4.55  6+:0.25 8+:0.18 10+:0.11 12+:0.09
+Daniel Jones               implied  4.50  6+:0.30 8+:0.07 10+:0.06 12+:0.04
+Lamar Jackson              implied  4.45  6+:0.26 8+:0.12 10+:0.10 12+:0.05
+Kyler Murray               implied  4.40  6+:0.28 8+:0.07 10+:0.05 12+:0.04
+Jonathon Brooks            implied  4.40  6+:0.23 8+:0.15 10+:0.10
+Drake Maye                 implied  4.35  6+:0.22 8+:0.17 10+:0.06 12+:0.07
+Mike Washington Jr.        implied  4.30  6+:0.26 8+:0.07 10+:0.05
+Fernando Mendoza           implied  4.20  6+:0.24 8+:0.05 10+:0.05 12+:0.03
+Tyler Allgeier             implied  4.15  6+:0.21 8+:0.10 10+:0.07
+Alvin Kamara               implied  4.15  6+:0.20 8+:0.12 10+:0.12
+Kenneth Gainwell           implied  4.10  6+:0.21 8+:0.11 10+:0.05
+Jonah Coleman              implied  4.05  6+:0.20 8+:0.10 10+:0.10
+Aaron Jones Sr.            implied  3.75  6+:0.15 8+:0.10 10+:0.12 12+:0.04
+Kaelon Black               implied  3.30  6+:0.10 8+:0.07 10+:0.05
+Eli Heidenreich            implied  3.25  6+:0.10 8+:0.05 10+:0.05
+==== REC 45
+Ja'Marr Chase              implied  8.00  6+:0.72 8+:0.42 10+:0.40 12+:0.22 14+:0.15
+Amon-Ra St. Brown          implied  7.85  6+:0.71 8+:0.38 10+:0.44 12+:0.20 14+:0.12
+A.J. Brown                 implied  7.65  6+:0.71 8+:0.45 10+:0.33 12+:0.12 14+:0.08
+Davante Adams              implied  7.40  6+:0.42 8+:0.63 10+:0.27 12+:0.19
+CeeDee Lamb                implied  6.90  6+:0.71 8+:0.29 10+:0.22 12+:0.14 14+:0.12
+Rome Odunze                implied  6.85  6+:0.64 8+:0.36 10+:0.23
+Colston Loveland           implied  6.65  6+:0.59 8+:0.34 10+:0.22 12+:0.13
+Justin Jefferson           implied  6.50  6+:0.53 8+:0.35 10+:0.21 12+:0.10 14+:0.07
+Brock Bowers               implied  6.40  6+:0.52 8+:0.34 10+:0.21 12+:0.12
+Terry McLaurin             implied  6.15  6+:0.58 8+:0.26 10+:0.12 12+:0.08
+Puka Nacua                 implied  6.15  6+:0.42 8+:0.32 10+:0.26 12+:0.19 14+:0.12
+Nico Collins               implied  6.10  6+:0.59 8+:0.20 10+:0.15 12+:0.10 14+:0.07
+Malik Nabers               implied  6.10  6+:0.42 8+:0.39 10+:0.16 12+:0.12 14+:0.07
+DeVonta Smith              implied  6.10  6+:0.56 8+:0.26 10+:0.11 12+:0.08 14+:0.07
+Jaxon Smith-Njigba         implied  6.05  6+:0.43 8+:0.33 10+:0.21 12+:0.15 14+:0.12
+Zay Flowers                implied  5.95  6+:0.56 8+:0.19 10+:0.15 12+:0.09 14+:0.07
+Rashee Rice                implied  5.95  6+:0.41 8+:0.29 10+:0.27 12+:0.15 14+:0.12
+DJ Moore                   implied  5.90  6+:0.45 8+:0.31 10+:0.14
+Tee Higgins                implied  5.80  6+:0.41 8+:0.29 10+:0.18 12+:0.12 14+:0.07
+Mike Evans                 implied  5.80  6+:0.39 8+:0.29 10+:0.28
+Chris Olave                implied  5.80  6+:0.47 8+:0.23 10+:0.17 12+:0.10 14+:0.09
+Garrett Wilson             implied  5.75  6+:0.44 8+:0.26 10+:0.16 12+:0.10 14+:0.07
+Emeka Egbuka               implied  5.75  6+:0.42 8+:0.25 10+:0.25 12+:0.10
+Tetairoa McMillan          implied  5.65  6+:0.37 8+:0.34 10+:0.14 12+:0.07 14+:0.07
+Drake London               implied  5.65  6+:0.42 8+:0.26 10+:0.16 12+:0.10 14+:0.07
+Marvin Harrison Jr.        implied  5.60  6+:0.42 8+:0.26 10+:0.11
+George Pickens             implied  5.55  6+:0.39 8+:0.26 10+:0.18 12+:0.12 14+:0.07
+Ladd McConkey              implied  5.50  6+:0.42 8+:0.21 10+:0.15 12+:0.07
+Tyler Warren               implied  5.40  6+:0.42 8+:0.18 10+:0.11 12+:0.07
+Trey McBride               implied  5.25  6+:0.37 8+:0.21 10+:0.13 12+:0.09
+Luther Burden III          implied  5.25  6+:0.36 8+:0.23 10+:0.14
+DK Metcalf                 implied  5.25  6+:0.41 8+:0.15 10+:0.12
+Parker Washington          implied  5.20  6+:0.40 8+:0.17 10+:0.07
+Michael Wilson             implied  5.15  6+:0.41 8+:0.12 10+:0.09
+Harold Fannin Jr.          implied  5.15  6+:0.42 8+:0.12 10+:0.07
+Makai Lemon                implied  5.10  6+:0.41 8+:0.12 10+:0.07
+Brian Thomas Jr.           implied  5.10  6+:0.41 8+:0.12 10+:0.12
+Kenyon Sadiq               implied  5.05  6+:0.41 8+:0.09 10+:0.07
+Isaiah Likely              implied  5.05  6+:0.40 8+:0.12 10+:0.07
+Jameson Williams           implied  4.85  6+:0.30 8+:0.18 10+:0.12
+Jaylen Waddle              implied  4.75  6+:0.29 8+:0.16 10+:0.12 12+:0.07
+Sam LaPorta                implied  4.50  6+:0.26 8+:0.15 10+:0.10
+Jordyn Tyson               implied  4.40  6+:0.26 8+:0.12 10+:0.07
+Travis Kelce               implied  4.35  6+:0.24 8+:0.12 10+:0.08
+Carnell Tate               implied  4.30  6+:0.23 8+:0.12 10+:0.07 12+:0.07

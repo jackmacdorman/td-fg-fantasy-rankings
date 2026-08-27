@@ -1,0 +1,65 @@
+name,team,pos,pass_td,rush_td,rec_td,fg,pat,dst_td,safety,confidence,source,notes
+Jason Myers,SEA,K,,,,39,50,,,HIGH,CBS 2026 proj,Led NFL 43 FGM 2025 on 48 FGA
+Ka'imi Fairbairn,HOU,K,,,,39,39,,,HIGH,CBS 2026 proj,Best FG-lean in league; HOU led NFL 52 FGA
+Brandon Aubrey,DAL,K,,,,35,49,,,HIGH,CBS + FantasyPros agree,
+Blake Grupe,IND,K,,,,34,51,,,MEDIUM,CBS 2026 proj,Shrader listed as backup
+Cameron Dicker,LAC,K,,,,35,38,,,HIGH,CBS 2026 proj,92.7 pct in 2025; strong FG lean
+Jake Bates,DET,K,,,,31,53,,,HIGH,CBS 2026 proj,XP-heavy; TD offense caps him
+Cairo Santos,CHI,K,,,,32,47,,,HIGH,CBS 2026 proj,39 FGA in 2025
+Will Reichard,MIN,K,,,,33,42,,,HIGH,CBS 2026 proj,94.3 pct in 2025
+Chase McLaughlin,TB,K,,,,33,42,,,HIGH,CBS 2026 proj,
+Harrison Mevis,LAR,K,,,,29,55,,,MEDIUM,CBS 2026 proj,Most TD-heavy K; LAR led NFL RZ trips
+Harrison Butker,KC,K,,,,33,35,,,HIGH,CBS 2026 proj,Strong FG lean
+Tyler Loop,BAL,K,,,,29,49,,,MEDIUM,CBS 2026 proj,Year 2; BAL 11.5 win total
+Cam Little,JAX,K,,,,29,48,,,HIGH,CBS 2026 proj,
+Wil Lutz,DEN,K,,,,30,44,,,HIGH,CBS 2026 proj,
+Evan McPherson,CIN,K,,,,29,47,,,HIGH,CBS 2026 proj,Only 28 FGA in 2025
+Eddy Pineiro,SF,K,,,,31,37,,,MEDIUM,CBS 2026 proj,
+Nick Folk,ATL,K,,,,30,41,,,MEDIUM,CBS 2026 proj,Age risk
+Daniel Carlson,NO,K,,,,30,37,,,LOW,Estimate; signed 8/24/26,Published projections stale (built on Smyth); NO 42 FGA at 71.4 pct = upside
+Trey Smack,GB,K,,,,29,38,,,LOW,CBS 2026 proj,Rookie 6th rounder
+Jason Sanders,NYJ,K,,,,29,35,,,HIGH,CBS 2026 proj,Won job; York waived
+Tyler Bass,BUF,K,,,,26,46,,,MEDIUM,CBS 2026 proj,TRAP: BUF had fewest FGA in NFL (21) in 2025
+Joey Slye,TEN,K,,,,29,34,,,MEDIUM,CBS 2026 proj,
+Andres Borregales,NE,K,,,,26,42,,,MEDIUM,CBS 2026 proj,
+Drew Stevens,WAS,K,,,,27,39,,,LOW,CBS 2026 proj,Rookie
+Riley Patterson,MIA,K,,,,27,38,,,LOW,CBS 2026 proj,Zane Gonzalez on roster
+Jake Elliott,PHI,K,,,,26,41,,,MEDIUM,CBS 2026 proj,74.1 pct in 2025 (worst); PHI best RZ TD pct
+Chad Ryland,ARI,K,,,,26,37,,,MEDIUM,CBS 2026 proj,ARI 4.5 win total
+Giants Kicker,NYG,K,,,,27,34,,,LOW,CBS 2026 proj,Open battle Sauls vs Zvada; avoid
+Chris Boswell,PIT,K,,,,25,36,,,MEDIUM,CBS 2026 proj,
+Ryan Fitzgerald,CAR,K,,,,24,34,,,LOW,CBS 2026 proj,
+Matt Gay,LV,K,,,,23,32,,,MEDIUM,CBS 2026 proj,LV 5.5 win total
+Andre Szmyt,CLE,K,,,,23,32,,,LOW,CBS 2026 proj,CLE 7.8 win total
+Seahawks D/ST,SEA,DST,,,,,,3.47,0.50,MEDIUM,Model est. on NFL.com 3yr,Only team with 3+ def TD all 3 yrs; Tory Horton PR
+Cowboys D/ST,DAL,DST,,,,,,3.14,0.45,MEDIUM,Model est. on NFL.com 3yr,KaVontae Turpin led NFL KR yds 2025
+Texans D/ST,HOU,DST,,,,,,2.79,0.65,MEDIUM,Model est. on NFL.com 3yr,3 FR TD in 2025; elite pass rush; weak returns
+Browns D/ST,CLE,DST,,,,,,2.79,0.60,MEDIUM,Model est. on NFL.com 3yr,3 INT TD on only 11 INTs; bad offense = more snaps
+Broncos D/ST,DEN,DST,,,,,,2.77,0.65,MEDIUM,Model est. on NFL.com 3yr,Marvin Mims led PR yds 2025
+Vikings D/ST,MIN,DST,,,,,,2.77,0.60,MEDIUM,Model est. on NFL.com 3yr,Led NFL forced fumbles 2025
+Bills D/ST,BUF,DST,,,,,,2.77,0.50,MEDIUM,Model est. on NFL.com 3yr,Consistent 2-3 def TD/yr
+Jaguars D/ST,JAX,DST,,,,,,2.63,0.55,MEDIUM,Model est. on NFL.com 3yr,Parker Washington 3 PR TD in 2 yrs
+Falcons D/ST,ATL,DST,,,,,,2.60,0.50,MEDIUM,Model est. on NFL.com 3yr,4 def TD in 2024; Branch return upside
+Patriots D/ST,NE,DST,,,,,,2.47,0.50,MEDIUM,Model est. on NFL.com 3yr,Marcus Jones 2 PR TD 2025; best PR unit
+Steelers D/ST,PIT,DST,,,,,,2.45,0.60,MEDIUM,Model est. on NFL.com 3yr,3 def TD 2025
+Raiders D/ST,LV,DST,,,,,,2.45,0.55,LOW,Model est. on NFL.com 3yr,5 def TD in 2023 then 1 then 0
+Colts D/ST,IND,DST,,,,,,2.45,0.50,MEDIUM,Model est. on NFL.com 3yr,
+Ravens D/ST,BAL,DST,,,,,,2.43,0.55,MEDIUM,Model est. on NFL.com 3yr,Steady 1-2/yr
+Bears D/ST,CHI,DST,,,,,,2.43,0.50,MEDIUM,Model est. on NFL.com 3yr,Led NFL 23 INTs 2025
+Jets D/ST,NYJ,DST,,,,,,2.30,0.45,LOW,Model est. on NFL.com 3yr,Best return duo; defense contributes nothing
+Titans D/ST,TEN,DST,,,,,,2.30,0.40,LOW,Model est. on NFL.com 3yr,Chimere Dike 2 PR TD 2025; pure return play
+New Orleans D/ST,NO,DST,,,,,,2.28,0.45,LOW,Model est. on NFL.com 3yr,3 def TD 2025
+Giants D/ST,NYG,DST,,,,,,2.27,0.60,LOW,Model est. on NFL.com 3yr,Elite pass rush drives safeties
+Bengals D/ST,CIN,DST,,,,,,2.27,0.45,MEDIUM,Model est. on NFL.com 3yr,Charlie Jones KR TD in both 2024 and 2025
+Dolphins D/ST,MIA,DST,,,,,,2.27,0.40,LOW,Model est. on NFL.com 3yr,0 def TD in 2024 AND 2025
+Panthers D/ST,CAR,DST,,,,,,2.12,0.45,LOW,Model est. on NFL.com 3yr,
+Buccaneers D/ST,TB,DST,,,,,,2.12,0.45,MEDIUM,Model est. on NFL.com 3yr,
+Chiefs D/ST,KC,DST,,,,,,2.10,0.50,MEDIUM,Model est. on NFL.com 3yr,0 def TD in 2025; low variance
+Eagles D/ST,PHI,DST,,,,,,2.03,0.60,MEDIUM,Model est. on NFL.com 3yr,TRAP: great real defense but no return game
+49ers D/ST,SF,DST,,,,,,1.95,0.55,MEDIUM,Model est. on NFL.com 3yr,Exactly 1 def TD each of last 3 yrs
+Cardinals D/ST,ARI,DST,,,,,,1.95,0.50,LOW,Model est. on NFL.com 3yr,
+Rams D/ST,LAR,DST,,,,,,1.87,0.50,MEDIUM,Model est. on NFL.com 3yr,Weak returners
+Lions D/ST,DET,DST,,,,,,1.78,0.45,MEDIUM,Model est. on NFL.com 3yr,Only 2 def TD in 3 seasons
+Commanders D/ST,WAS,DST,,,,,,1.77,0.40,LOW,Model est. on NFL.com 3yr,1 def TD in 3 years
+Packers D/ST,GB,DST,,,,,,1.70,0.55,MEDIUM,Model est. on NFL.com 3yr,0 def TD 2025; poor returner
+Chargers D/ST,LAC,DST,,,,,,1.62,0.50,MEDIUM,Model est. on NFL.com 3yr,1 def TD in 3 seasons; 19 INTs to 0 INT TD

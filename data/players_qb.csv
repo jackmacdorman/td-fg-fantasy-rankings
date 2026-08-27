@@ -1,0 +1,38 @@
+name,team,pos,pass_td,rush_td,rec_td,fg,pat,dst_td,safety,confidence,source,notes
+Josh Allen,BUF,QB,27,12,,,,,,HIGH,Vegas O24.5 pass TD + 7 proj sources,TIER OF ONE. 12 rush TDs alone outscore 20 of 40 QBs in total
+Jalen Hurts,PHI,QB,24,8.5,,,,,,HIGH,7 proj sources,Tush push survived 2026 rules vote; goal-line sneak intact
+Joe Burrow,CIN,QB,33,1.5,,,,,,HIGH,6 proj sources,Volume passer; CIN 26.0 implied pts
+Drake Maye,NE,QB,28,4,,,,,,HIGH,6 proj sources,NE 10.5 win total
+Trevor Lawrence,JAX,QB,26,4.5,,,,,,HIGH,6 proj sources,
+Matthew Stafford,LAR,QB,34,0.5,,,,,,HIGH,6 proj sources,LAR highest implied pts 26.6 but zero rush value
+Dak Prescott,DAL,QB,30.5,2,,,,,,HIGH,Vegas O27.5 pass TD + 5 proj,
+Jaxson Dart,NYG,QB,22,6,,,,,,HIGH,6 proj sources,BIGGEST ADP ARBITRAGE. But new HC Harbaugh may curb rushing
+Brock Purdy,SF,QB,27,3.5,,,,,,HIGH,6 proj sources,
+Lamar Jackson,BAL,QB,26.5,3.5,,,,,,HIGH,6 proj sources,BAL 11.5 win total
+Jayden Daniels,WAS,QB,23.5,5,,,,,,HIGH,6 proj sources,
+Bo Nix,DEN,QB,26.5,3.5,,,,,,HIGH,5 proj sources,
+Caleb Williams,CHI,QB,27,3,,,,,,HIGH,6 proj sources,
+Justin Herbert,LAC,QB,27.5,2.5,,,,,,HIGH,Vegas O22.5 pass TD + 4 proj,
+Patrick Mahomes,KC,QB,26,3,,,,,,MEDIUM,5 proj sources,INJURY RISK: torn ACL+LCL 2025; no preseason snaps
+Jared Goff,DET,QB,30,0.5,,,,,,MEDIUM,5 proj sources,DET 26.1 implied pts; no rush value
+Daniel Jones,IND,QB,21,5,,,,,,MEDIUM,4 proj sources,VALUE: Clay 6 rush TD Razzball 7.3; nobody drafts him for that
+Tyler Shough,NO,QB,21.5,4.5,,,,,,HIGH,4 proj sources,
+Jordan Love,GB,QB,26.5,1.5,,,,,,HIGH,4 proj sources,
+Baker Mayfield,TB,QB,25.5,1.5,,,,,,MEDIUM,4 proj sources,
+Sam Darnold,SEA,QB,26,1,,,,,,HIGH,4 proj sources,
+Kyler Murray,MIN,QB,21.5,3,,,,,,MEDIUM,4 proj sources,Named Week 1 starter over McCarthy
+Bryce Young,CAR,QB,21.5,2.5,,,,,,MEDIUM,4 proj sources,
+C.J. Stroud,HOU,QB,22.5,1.5,,,,,,HIGH,Vegas U22.5 pass TD + 4 proj,Vegas is fading him
+Aaron Rodgers,PIT,QB,22,1,,,,,,MEDIUM,4 proj sources,
+Geno Smith,NYJ,QB,19.5,1.5,,,,,,MEDIUM,4 proj sources,NYJ lowest implied total 18.4
+Malik Willis,MIA,QB,14,4,,,,,,LOW,4 proj sources disagree wildly,LOTTERY TICKET: Yahoo proj 7 rush TD Razzball 2.8
+Cam Ward,TEN,QB,18.5,1.5,,,,,,MEDIUM,4 proj sources,
+Jacoby Brissett,ARI,QB,18,1,,,,,,MEDIUM,4 proj sources,ARI 3.5 win total worst in NFL
+Fernando Mendoza,LV,QB,13,1.5,,,,,,LOW,4 proj sources,Rookie No.1 overall; Cousins starts Week 1 but handoff expected
+Shedeur Sanders,CLE,QB,11,1.5,,,,,,LOW,3 proj sources,Watson named starter but Clay projects Sanders more volume
+Tua Tagovailoa,ATL,QB,12,0,,,,,,LOW,4 proj sources,ATL QB job unsettled; no rush value either way
+Deshaun Watson,CLE,QB,10,1,,,,,,LOW,4 proj sources,Named Week 1 starter; sources conflict badly
+Michael Penix Jr.,ATL,QB,8,1,,,,,,LOW,4 proj sources,Recovering from torn ACL not fully cleared
+Justin Fields,KC,QB,1,1,,,,,,LOW,3 proj sources,BEST HANDCUFF IN FORMAT: rushing QB behind Mahomes ACL recovery
+Kirk Cousins,LV,QB,6,0,,,,,,LOW,4 proj sources,
+J.J. McCarthy,MIN,QB,3,1,,,,,,LOW,3 proj sources,Lost job to Murray
