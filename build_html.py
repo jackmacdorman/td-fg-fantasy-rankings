@@ -32,6 +32,14 @@ for p in BOARD["players"]:
         "n": p["name"],
         "t": p["team"],
         "p": p["pos"],
+        # Category splits, grouped by what they pay rather than by how they were
+        # scored: passing TDs are the 3-point bucket, everything else that reaches
+        # the end zone is the 6-point bucket -- including D/ST return TDs, which
+        # belong with rush/rec for a defense the same way a rushing TD does for a QB.
+        "ptd": round(p["pass_td"], 1),
+        "td": round(p["rush_td"] + p["rec_td"] + p["dst_td"], 1),
+        "fg": round(p["fg"], 1),
+        "xp": round(p["pat"], 1),
         "pts": round(p["points"], 1),
         "vor": round(p["adj_vor"], 1),
         "raw": p["raw_rank"],
@@ -95,10 +103,17 @@ tr.mine td{background:#132a1e}
 tr.mine:hover td{background:#183524}
 .pos{display:inline-block;min-width:34px;text-align:center;border-radius:4px;
   padding:1px 5px;font-size:11px;font-weight:700;color:#0c1220}
-.nm{font-weight:600}
+/* Four extra columns squeeze the name cell; without this it wraps to two lines at
+   narrower widths and halves how many players fit on screen. */
+.nm{font-weight:600;white-space:nowrap}
 .tm{color:var(--dim);font-size:12px}
 .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .vor{font-weight:700}
+/* Category splits sit between the name and the total, so keep them quieter than
+   both -- they are there to be read on demand, not to compete with Pts. */
+td.cat{color:#aebbd1}
+th.cat{color:#6f7d97}
+.zero{color:#39435a}
 .note{color:var(--dim);font-size:12px;max-width:640px}
 .badge{font-size:9.5px;font-weight:700;letter-spacing:.4px;padding:1px 5px;
   border-radius:3px;margin-right:6px;vertical-align:1px}
@@ -138,6 +153,10 @@ tr.mine .mineBtn{border-color:#5ad18f;color:#5ad18f}
   <table>
     <thead><tr>
       <th data-k="r">#</th><th data-k="p">Pos</th><th data-k="n">Player</th>
+      <th data-k="ptd" class="num cat" title="Projected passing TDs (3 pts each)">Pass&nbsp;TD</th>
+      <th data-k="td" class="num cat" title="Projected rushing + receiving TDs, and D/ST return TDs (6 pts each)">TD</th>
+      <th data-k="fg" class="num cat" title="Projected field goals made, all distances (3 pts each)">FG</th>
+      <th data-k="xp" class="num cat" title="Projected extra points made (1 pt each)">XP</th>
       <th data-k="pts" class="num">Pts</th><th data-k="vor" class="num">Adj VOR</th>
       <th data-k="c">Conf</th><th>Notes</th><th></th>
     </tr></thead>
@@ -155,6 +174,11 @@ const POS = ["QB","RB","WR","TE","K","DST"];
 
 const save = () => localStorage.setItem(KEY,
   JSON.stringify({gone:[...gone], mine:[...mine], log}));
+
+// Almost every player scores in exactly one category, so 288 rows of "0.0" would
+// be noise. Show a dot instead, and drop the decimal on whole numbers (FG/XP).
+const stat = v => v ? (Number.isInteger(v) ? v : v.toFixed(1))
+                    : '<span class="zero">\\u00b7</span>';
 
 // Build filter buttons
 const fEl = document.getElementById("filters");
@@ -180,6 +204,10 @@ function makeRow(pl){
     <td class="num" style="color:var(--dim)">${pl.r}</td>
     <td><span class="pos" style="background:var(--${pl.p})">${pl.pr}</span></td>
     <td><span class="nm">${pl.n}</span> <span class="tm">${pl.t}</span></td>
+    <td class="num cat">${stat(pl.ptd)}</td>
+    <td class="num cat">${stat(pl.td)}</td>
+    <td class="num cat">${stat(pl.fg)}</td>
+    <td class="num cat">${stat(pl.xp)}</td>
     <td class="num">${pl.pts.toFixed(1)}</td>
     <td class="num vor">${pl.vor.toFixed(1)}</td>
     <td><span class="conf ${pl.c}">${pl.c}</span></td>
