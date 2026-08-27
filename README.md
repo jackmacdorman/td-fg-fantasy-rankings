@@ -38,6 +38,32 @@ plus Strategy, Sleepers, Traps, Sources, and Settings.
 Points and VOR are live formulas pointing at the Settings tab, so editing a projection
 or a scoring weight re-ranks the sheet. Blue cells are inputs; black cells are formulas.
 
+## The 2025 column
+
+Every other number on the board is a forecast. **`2025 Exp PPG`** is not: it is what each
+player actually scored last season under these exact settings, taken as a per-game rate and
+multiplied out to 18 games. Expressing it as a rate normalises for injury — a back who missed
+half of 2025 is measured on the games he played rather than punished for the ones he missed.
+
+It is built by `actuals_2025.py` from nflverse (per-player season totals, plus play-by-play for
+defensive and return scoring), and it imports `SCORING` from `rank.py` rather than restating it,
+so the projection column and the 2025 column can never score the same event differently. It is
+display-only: nothing about it feeds points, VOR, or the ordering of the board.
+
+Two things to know before reading it:
+
+- **A dash means no 2025 season, not a season of zero.** 27 players on the board are rookies or
+  missed the whole year (Jeanty's classmates, Deshaun Watson, Tyler Bass). Drawing them as `0.0`
+  would have implied they played and failed to score.
+- **It runs about 6% high against the column beside it.** ×18 was the number asked for, but the
+  projections are built on a 17-game season — that is what the Vegas implied team totals are
+  quoted over and what `vegas_anchor.py` uses. For a like-for-like read, change `GAMES_FORWARD`
+  in `actuals_2025.py` to 17.
+
+Small samples are the other trap, and the reason games played is on the cell's hover text:
+Malik Willis's 94.5 comes off four games, and is not the same kind of number as Josh Allen's
+178.9 off sixteen. Eight players on the board sit on six games or fewer.
+
 ## How ranking works
 
 Players are ranked by **adjusted value over replacement**, not raw projected points.
@@ -79,10 +105,15 @@ from #9 down.
 python3 fetch_espn.py WR TE     # pull ESPN 2026 projections
 python3 merge_wr_te.py          # merge with FFToday into consensus
 python3 vegas_anchor.py         # re-anchor TD levels to market -> data/players_vegas.csv
+python3 actuals_2025.py         # score last season -> data/actual_2025.csv
 python3 rank.py --players data/players_vegas.csv --teams 12   # -> data/board.json
 python3 build_xlsx.py           # render the workbook
 python3 build_html.py           # render draft-board.html
 ```
+
+`actuals_2025.py` caches ~20MB of nflverse data under `data/raw/nflverse/` on first run and is
+a no-op afterwards; `rank.py` tolerates its output being absent, in which case the 2025 column
+renders empty for everyone.
 
 Skipping `vegas_anchor.py` and ranking `data/players.csv` directly gives the old
 projection-consensus board, which is a useful thing to diff against but is not what the

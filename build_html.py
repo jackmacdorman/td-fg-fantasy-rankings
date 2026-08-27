@@ -41,6 +41,12 @@ for p in BOARD["players"]:
         "fg": round(p["fg"], 1),
         "xp": round(p["pat"], 1),
         "pts": round(p["points"], 1),
+        # Last season's actual result under these same rules, as a per-game rate
+        # multiplied out. null, not 0, for a rookie or a man who missed the year:
+        # they have no season to score, which is a different thing from scoring
+        # nothing, and the board must not draw them the same way.
+        "e25": None if p.get("exp_2025") is None else round(p["exp_2025"], 1),
+        "g25": p.get("games_2025"),
         "vor": round(p["adj_vor"], 1),
         "raw": p["raw_rank"],
         "c": p.get("confidence", ""),
@@ -115,6 +121,9 @@ tr.mine:hover td{background:#183524}
 /* Category splits sit between the name and the total, so keep them quieter than
    both -- they are there to be read on demand, not to compete with Pts. */
 td.cat{color:#aebbd1}
+/* Last season is a result, not a forecast. Tinted so the eye can tell at a
+   glance which of the two adjacent totals is the one that already happened. */
+td.last{color:#8fb8a8}
 th.cat{color:#6f7d97}
 .zero{color:#39435a}
 /* One line, clipped, full text on hover. Left to wrap, a long trap explanation
@@ -161,12 +170,13 @@ tr.mine .mineBtn{border-color:#5ad18f;color:#5ad18f}
   <table>
     <thead><tr>
       <th data-k="r">#</th><th data-k="p">Pos</th><th data-k="n">Player</th>
-      <th data-k="pts" class="num" title="Total projected fantasy points. The category columns to the right are what it is made of.">Pts</th>
+      <th data-k="pts" class="num" title="Total projected fantasy points for 2026. The category columns to the right are what it is made of.">Pts</th>
+      <th data-k="e25" class="num" title="What this player actually scored in 2025 under these exact league settings, as a per-game rate multiplied out to 18 games. Hover a value to see how many games it is averaged over. A dash means he has no 2025 season -- a rookie, or a year missed to injury -- which is not the same as having scored nothing.">2025&nbsp;Exp&nbsp;PPG</th>
+      <th data-k="vor" class="num" title="Adjusted value over replacement -- how many points this player beats a freely available player at his own position by, discounted for how much of that edge is real. This is what the board is sorted by.">Adj&nbsp;VOR</th>
       <th data-k="ptd" class="num cat" title="Projected passing TDs (3 pts each)">Pass&nbsp;TD</th>
       <th data-k="td" class="num cat" title="Projected rushing + receiving TDs, and D/ST return TDs (6 pts each)">TD</th>
       <th data-k="fg" class="num cat" title="Projected field goals made, all distances (3 pts each)">FG</th>
       <th data-k="xp" class="num cat" title="Projected extra points made (1 pt each)">XP</th>
-      <th data-k="vor" class="num" title="Adjusted value over replacement -- how many points this player beats a freely available player at his own position by, discounted for how much of that edge is real. This is what the board is sorted by.">Adj&nbsp;VOR</th>
       <th data-k="c">Conf</th><th>Notes</th><th></th>
     </tr></thead>
     <tbody id="tb"></tbody>
@@ -211,16 +221,24 @@ function makeRow(pl){
   const note = pl.tagwhy || pl.note || "";
   // Clipped to one line in CSS, so the full text has to live somewhere reachable.
   const noteAttr = note.replace(/"/g, "&quot;");
+  // A rate off four games and a rate off seventeen print identically, so the
+  // sample size has to be on the cell -- otherwise Malik Willis's 94.5 reads
+  // like Josh Allen's 178.9 rather than like the four-game fluke it is.
+  const a25 = pl.e25===null ? "—" : pl.e25.toFixed(1);
+  const a25t = pl.e25===null
+    ? "No 2025 season — rookie, or missed the year"
+    : `2025 rate over ${pl.g25} game${pl.g25===1?"":"s"}, x18`;
   tr.innerHTML=`
     <td class="num" style="color:var(--dim)">${pl.r}</td>
     <td><span class="pos" style="background:var(--${pl.p})">${pl.pr}</span></td>
     <td class="pl"><span class="nm">${pl.n}</span> <span class="tm">${pl.t}</span></td>
     <td class="num">${pl.pts.toFixed(1)}</td>
+    <td class="num last" title="${a25t}">${a25}</td>
+    <td class="num vor">${pl.vor.toFixed(1)}</td>
     <td class="num cat">${stat(pl.ptd)}</td>
     <td class="num cat">${stat(pl.td)}</td>
     <td class="num cat">${stat(pl.fg)}</td>
     <td class="num cat">${stat(pl.xp)}</td>
-    <td class="num vor">${pl.vor.toFixed(1)}</td>
     <td><span class="conf ${pl.c}">${pl.c}</span></td>
     <td class="note" title="${noteAttr}">${badge}${note}</td>
     <td><button class="mineBtn" title="Draft to my team">mine</button></td>`;
@@ -282,6 +300,11 @@ function render(){
   const dir = (sortKey==="r"||sortKey==="n"||sortKey==="p"||sortKey==="c")?1:-1;
   list.sort((a,b)=>{
     const x=a[sortKey], y=b[sortKey];
+    // Sorting by 2025, a null is "unknown", not "worst". It must sink to the
+    // bottom whichever way the column is pointed -- so it is held out of the
+    // comparison rather than coerced, which would make null-0 = 0 and scatter
+    // every rookie through the middle of the list.
+    if(x===null||y===null) return (x===null)-(y===null);
     if(typeof x==="string") return dir*x.localeCompare(y);
     return dir*(x-y);
   });

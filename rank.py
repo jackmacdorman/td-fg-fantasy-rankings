@@ -75,6 +75,52 @@ def load_players(path):
     return players
 
 
+def attach_actuals(players, path):
+    """Attach each player's 2025 result, scored under these same rules.
+
+    Display only: nothing here touches points, VOR or the ordering of the board.
+    It is a reality check sitting beside the forecast, not an input to it.
+
+    A player with no 2025 row gets None rather than 0.0, and the board renders
+    that as a dash. Rookies and men who missed the whole season did not score
+    zero points -- they have no 2025 season to score, and the two must not look
+    alike on screen.
+    """
+    # Imported inside the function because actuals_2025 imports SCORING from this
+    # module. At call time rank is fully loaded, so this resolves cleanly; at
+    # import time it would be a cycle.
+    from actuals_2025 import norm
+
+    if not Path(path).exists():
+        for p in players:
+            p["exp_2025"] = p["games_2025"] = None
+        return 0
+
+    by_key, by_name = {}, defaultdict(list)
+    with open(path, newline="", encoding="utf-8") as fh:
+        for r in csv.DictReader(fh):
+            rec = (float(r["exp_2025"]), int(r["games"]))
+            by_key[(r["key"], r["pos"])] = rec
+            by_name[r["key"]].append((r["pos"], rec))
+
+    hits = 0
+    for p in players:
+        # A D/ST is keyed by team code, everyone else by name.
+        key = p["team"].upper() if p["pos"] == "DST" else norm(p["name"])
+        rec = by_key.get((key, p["pos"]))
+        if rec is None:
+            # Position codes differ between sources at the margins (a fullback
+            # the board lists at RB). Fall back to the name only when it is
+            # unambiguous, which the (name, pos) keying has already established
+            # it usually is.
+            cands = by_name.get(key, [])
+            if len(cands) == 1:
+                rec = cands[0][1]
+        p["exp_2025"], p["games_2025"] = rec if rec else (None, None)
+        hits += rec is not None
+    return hits
+
+
 def replacement_levels(players, teams):
     """Baseline = mean of the players just past the last startable slot.
 
@@ -125,9 +171,11 @@ def main():
     ap.add_argument("--players", default="data/players.csv")
     ap.add_argument("--teams", type=int, default=12)
     ap.add_argument("--out", default="data/board.json")
+    ap.add_argument("--actuals", default="data/actual_2025.csv")
     args = ap.parse_args()
 
     players = load_players(args.players)
+    hits = attach_actuals(players, args.actuals)
     board, levels = rank(players, args.teams)
 
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
@@ -139,6 +187,7 @@ def main():
         )
 
     print(f"{len(board)} players ranked -> {args.out}")
+    print(f"  {hits}/{len(board)} matched to a 2025 season")
     for pos, level in sorted(levels.items()):
         print(f"  replacement {pos}: {level:.2f} pts")
     print()

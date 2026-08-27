@@ -156,6 +156,45 @@ worth zero here), 25th in this format — no return threat and only 5 defensive 
 - IND, MIA, LV, BUF: veteran backup on roster behind the starter.
 - GB/CLE/WAS: rookie or unproven starters.
 
+## Scoring the 2025 season (the reality-check column)
+
+Two decisions here were close calls and are worth recording, because both had a wrong answer
+that would have looked perfectly fine on screen.
+
+**Defensive TDs come from play-by-play, not from the season file.** The player file carries
+`def_tds` and `fumble_recovery_tds` as separate columns and they overlap — two corners are
+credited in both — while `fumble_recovery_tds` also credits *offensive* players (Tyler Lockett
+has one), which are not defensive scores at all. Summing them double-counts some teams and
+inflates others. Play-by-play settles it with one rule that cannot double-count, because each
+play scores at most once: a touchdown belongs to a team's D/ST when the team that scored it was
+not the team on offence. That captures INT returns, fumble returns, punt and kick returns, and
+blocked kicks. Result: **66 non-offensive TDs and 12 safeties league-wide**, Seattle top with 6.
+
+**Fuzzy name matching was tried and rejected.** Matching on surname surfaced 18 candidate pairs
+across the two sources, of which exactly **two** were the same man (Chigoziem/Chig Okonkwo,
+Andres/Andy Borregales). The other 16 were different players who happen to share a surname —
+Jonathon Brooks vs. Chris Brooks, Antonio Williams vs. Jameson Williams. Accepting them would
+have silently attributed one man's season to another, which is the kind of error that never
+announces itself. The alias table is therefore two entries long, and matching keys on *position
+as well as name*, because the season file contains eight pairs of distinct players sharing a
+name — two at positions this board ranks (a Michael Carter at RB and another at CB, a DJ Turner
+at WR and another at CB).
+
+261 of 288 board players matched. All 27 misses were checked individually and are genuine: 2025
+rookies, or men who missed the entire season (Tank Dell, Deshaun Watson, Tyler Bass, Jason
+Sanders, Jonathon Brooks, MarShawn Lloyd).
+
+**Small samples are the live risk in this column.** A rate off three games extrapolates to a
+season and prints identically to one off seventeen: Ben Sauls kicked 31 points in 3 games, which
+is 186.0 over 18. He is not on the board, but Malik Willis (4 games → 94.5) and Kyler Murray
+(5 → 86.4) are. Eight board players sit on ≤6 games. No minimum-games filter was applied — that
+would discard real information — so games played is on the cell's hover text instead.
+
+**Kansas City and Green Bay are real zeroes.** Both returned no non-offensive TD and no safety
+in 2025. The first cut of the script emitted only teams that scored, so those two dropped out of
+the file and read as missing data. They are now written explicitly as 0.0, which is a different
+claim from "unknown" and needs to look different.
+
 ## Data caveats
 - No Vegas season-long kicker props exist; books only post weekly in-season FG totals.
 - FOX Sports return-stat pages label players by 2026 team, not the team they scored for —

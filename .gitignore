@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 .DS_Store
 .claude/
+
+# ~20MB of nflverse source data, re-downloaded on demand by actuals_2025.py.
+# The derived data/actual_2025.csv is committed, so a clean checkout can rebuild
+# the board without fetching any of this.
+data/raw/nflverse/

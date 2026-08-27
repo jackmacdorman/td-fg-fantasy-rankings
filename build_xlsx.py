@@ -45,7 +45,8 @@ COLS = [
     ("Rank", 6), ("Pos", 6), ("Player", 24), ("Tm", 5), ("P", 5),
     ("PassTD", 8), ("RushTD", 8), ("RecTD", 8), ("FG", 6), ("PAT", 6),
     ("DefTD", 7), ("Saf", 6),
-    ("Points", 9), ("VOR", 8), ("Adj VOR", 9), ("Conf", 8), ("Notes", 62),
+    ("Points", 9), ("2025 Exp", 10), ("VOR", 8), ("Adj VOR", 9),
+    ("Conf", 8), ("Notes", 62),
 ]
 # Column letters for the stat inputs, used to build the Points formula.
 F_PASS, F_RUSH, F_REC, F_FG, F_PAT, F_DEF, F_SAF = "FGHIJKL"
@@ -97,19 +98,25 @@ def write_sheet(ws, rows, title):
         rely = f"INDEX(Settings!$H$4:$H$9,MATCH($E{r},Settings!$F$4:$F$9,0))"
 
         ws.cell(row=r, column=13, value=pts).font = BOLD
-        ws.cell(row=r, column=14, value=f"=M{r}-{repl}").font = BODY
-        ws.cell(row=r, column=15, value=f"=N{r}*{rely}").font = BOLD
-        ws.cell(row=r, column=16, value=p.get("confidence", "")).font = BODY
-        ws.cell(row=r, column=17, value=p.get("notes", "")).font = BODY
+        # Last season's actual, already scored. Deliberately NOT blue: the blue
+        # cells on this sheet are projections you are invited to argue with, and
+        # this is a result. Left empty for a player with no 2025 season, so that
+        # a rookie reads as blank rather than as a man who scored nothing.
+        a = ws.cell(row=r, column=14, value=p.get("exp_2025"))
+        a.font = BODY
+        ws.cell(row=r, column=15, value=f"=M{r}-{repl}").font = BODY
+        ws.cell(row=r, column=16, value=f"=O{r}*{rely}").font = BOLD
+        ws.cell(row=r, column=17, value=p.get("confidence", "")).font = BODY
+        ws.cell(row=r, column=18, value=p.get("notes", "")).font = BODY
 
-        for i in (13, 14, 15):
+        for i in (13, 14, 15, 16):
             c = ws.cell(row=r, column=i)
             c.number_format = "0.0"
             c.alignment = Alignment(horizontal="center")
             c.border = BORDER
-        ws.cell(row=r, column=16).alignment = Alignment(horizontal="center")
-        ws.cell(row=r, column=16).border = BORDER
+        ws.cell(row=r, column=17).alignment = Alignment(horizontal="center")
         ws.cell(row=r, column=17).border = BORDER
+        ws.cell(row=r, column=18).border = BORDER
 
         fill = PatternFill("solid", fgColor=POS_FILL[p["pos"]])
         for i in (2, 5):
@@ -178,6 +185,13 @@ def settings_sheet(ws):
         "",
         "Blue cells are inputs. Black cells are formulas. Edit projections directly on any",
         "tab and Points/VOR/Adj VOR recalculate.",
+        "",
+        "2025 Exp is not a projection and not editable: it is what the player actually scored",
+        "last season under these exact settings, as a per-game rate x18 games so that a man who",
+        "missed half the year is judged on the games he played. Source: nflverse play-by-play",
+        "and season totals. Blank means no 2025 season at all -- a rookie, or a year lost to",
+        "injury -- which is not the same as having scored zero. NOTE: the projections beside it",
+        "are built on a 17-game season, so this column runs about 6% high against them.",
     ]
     for i, line in enumerate(notes, start=11):
         ws.cell(row=i, column=6, value=line).font = Font(name=FONT, size=9, italic=True)
