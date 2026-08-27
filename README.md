@@ -40,7 +40,7 @@ or a scoring weight re-ranks the sheet. Blue cells are inputs; black cells are f
 
 ## The 2025 column
 
-Every other number on the board is a forecast. **`2025 Exp PPG`** is not: it is what each
+Every other number on the board is a forecast. **`2025 Pts`** is not: it is what each
 player actually scored last season under these exact settings, taken as a per-game rate and
 multiplied out to 18 games. Expressing it as a rate normalises for injury — a back who missed
 half of 2025 is measured on the games he played rather than punished for the ones he missed.

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the draft board workbook from data/board.json.
 
-Points/VOR are written as live formulas pointing at the Settings tab, so editing
+2026 Proj Pts / VOR are written as live formulas pointing at the Settings tab, so editing
 a projection or a scoring weight re-ranks the sheet instead of silently
 disagreeing with the numbers next to it.
 """
@@ -45,8 +45,8 @@ COLS = [
     ("Rank", 6), ("Pos", 6), ("Player", 24), ("Tm", 5), ("P", 5),
     ("PassTD", 8), ("RushTD", 8), ("RecTD", 8), ("FG", 6), ("PAT", 6),
     ("DefTD", 7), ("Saf", 6),
-    ("Points", 9), ("2025 Exp", 10), ("VOR", 8), ("Adj VOR", 9),
-    ("Conf", 8), ("Notes", 62),
+    ("2026 Proj Pts", 11), ("2025 Pts", 10), ("VOR", 8), ("Adj VOR", 9),
+    ("Conf Lvl", 9), ("Notes", 62),
 ]
 # Column letters for the stat inputs, used to build the Points formula.
 F_PASS, F_RUSH, F_REC, F_FG, F_PAT, F_DEF, F_SAF = "FGHIJKL"
@@ -184,9 +184,9 @@ def settings_sheet(ws):
         "is noise; raw VOR badly overrates both. Set every value to 1.00 to see raw VOR.",
         "",
         "Blue cells are inputs. Black cells are formulas. Edit projections directly on any",
-        "tab and Points/VOR/Adj VOR recalculate.",
+        "tab and 2026 Proj Pts / VOR / Adj VOR recalculate.",
         "",
-        "2025 Exp is not a projection and not editable: it is what the player actually scored",
+        "2025 Pts is not a projection and not editable: it is what the player actually scored",
         "last season under these exact settings, as a per-game rate x18 games so that a man who",
         "missed half the year is judged on the games he played. Source: nflverse play-by-play",
         "and season totals. Blank means no 2025 season at all -- a rookie, or a year lost to",
