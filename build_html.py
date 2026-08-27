@@ -121,9 +121,6 @@ tr.mine:hover td{background:#183524}
 /* Category splits sit between the name and the total, so keep them quieter than
    both -- they are there to be read on demand, not to compete with Pts. */
 td.cat{color:#aebbd1}
-/* Last season is a result, not a forecast. Tinted so the eye can tell at a
-   glance which of the two adjacent totals is the one that already happened. */
-td.last{color:#8fb8a8}
 th.cat{color:#6f7d97}
 .zero{color:#39435a}
 /* One line, clipped, full text on hover. Left to wrap, a long trap explanation
@@ -171,7 +168,7 @@ tr.mine .mineBtn{border-color:#5ad18f;color:#5ad18f}
     <thead><tr>
       <th data-k="r">#</th><th data-k="p">Pos</th><th data-k="n">Player</th>
       <th data-k="pts" class="num" title="Total projected fantasy points for 2026. The category columns to the right are what it is made of.">2026&nbsp;Proj&nbsp;Pts</th>
-      <th data-k="e25" class="num" title="What this player scored in 2025 under these exact league settings, as a per-game rate multiplied out to 18 games -- NOT his raw 2025 total. Scoring at his 2025 rate over a full 18 games is what this is. Hover a value to see how many games the rate is averaged over. A dash means no 2025 season at all -- a rookie, or a year missed to injury -- which is not the same as having scored nothing.">2025&nbsp;Pts</th>
+      <th data-k="e25" class="num cat" title="What this player scored in 2025 under these exact league settings, as a per-game rate multiplied out to 18 games -- NOT his raw 2025 total. Scoring at his 2025 rate over a full 18 games is what this is. Hover a value to see how many games the rate is averaged over. A dash means no 2025 season at all -- a rookie, or a year missed to injury -- which is not the same as having scored nothing.">2025&nbsp;Pts</th>
       <th data-k="vor" class="num" title="Adjusted value over replacement -- how many points this player beats a freely available player at his own position by, discounted for how much of that edge is real. This is what the board is sorted by.">Adj&nbsp;VOR</th>
       <th data-k="ptd" class="num cat" title="Projected passing TDs (3 pts each)">Pass&nbsp;TD</th>
       <th data-k="td" class="num cat" title="Projected rushing + receiving TDs, and D/ST return TDs (6 pts each)">TD</th>
@@ -224,7 +221,13 @@ function makeRow(pl){
   // A rate off four games and a rate off seventeen print identically, so the
   // sample size has to be on the cell -- otherwise Malik Willis's 94.5 reads
   // like Josh Allen's 178.9 rather than like the four-game fluke it is.
-  const a25 = pl.e25===null ? "—" : pl.e25.toFixed(1);
+  // Zero renders as the same middot the TD columns use, but "no season" stays a
+  // dash: Kansas City's defence played and scored nothing, Mendoza has no 2025
+  // at all, and those are different claims that must not collapse into one glyph.
+  // Always one decimal, unlike stat(), because these are three-digit point
+  // totals and dropping ".0" off the round ones breaks the column's alignment.
+  const a25 = pl.e25===null ? "—"
+            : pl.e25 ? pl.e25.toFixed(1) : '<span class="zero">\\u00b7</span>';
   const a25t = pl.e25===null
     ? "No 2025 season — rookie, or missed the year"
     : `2025 rate over ${pl.g25} game${pl.g25===1?"":"s"}, x18`;
@@ -233,7 +236,7 @@ function makeRow(pl){
     <td><span class="pos" style="background:var(--${pl.p})">${pl.pr}</span></td>
     <td class="pl"><span class="nm">${pl.n}</span> <span class="tm">${pl.t}</span></td>
     <td class="num">${pl.pts.toFixed(1)}</td>
-    <td class="num last" title="${a25t}">${a25}</td>
+    <td class="num cat" title="${a25t}">${a25}</td>
     <td class="num vor">${pl.vor.toFixed(1)}</td>
     <td class="num cat">${stat(pl.ptd)}</td>
     <td class="num cat">${stat(pl.td)}</td>
