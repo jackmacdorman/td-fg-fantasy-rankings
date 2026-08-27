@@ -117,15 +117,24 @@ tr.gone:not(.mine) .tm,
 tr.gone:not(.mine) .zero,
 tr.gone:not(.mine) .note,
 tr.gone:not(.mine) .conf{color:#ff5a68}
-tr.gone td{text-decoration:line-through;text-decoration-thickness:2px}
-tr.gone:not(.mine) td{text-decoration-color:#ff5a68}
+/* One unbroken rule across the row, drawn as an overlay per cell rather than with
+   text-decoration. Two reasons text-decoration was wrong: it only paints over the
+   glyphs, so the line broke at every gap between columns and vanished across the
+   empty ones; and it sits relative to each cell's own font, so the 12px team tag
+   and note struck at a different height from the 13px numbers -- a line that
+   stepped up and down the row. The cells are border-collapsed and touch edge to
+   edge, so a full-width bar in each joins into a single continuous line. */
+tr.gone td{position:relative}
+tr.gone td::after{content:"";position:absolute;left:0;right:0;top:calc(50% - 1px);
+  height:2px;pointer-events:none;background:#ff5a68}
 tr.gone:not(.mine) td:first-child{box-shadow:inset 3px 0 0 #ff5a68}
 tr.gone .pos,tr.gone .badge{opacity:.4}
 tr.gone:not(.mine):hover td{background:#2a1a1f}
 /* My own picks are also "off the board", so they match .gone unless excluded.
    They are the opposite kind of news and must not read as a loss -- struck
    through, but in the roster green rather than the taken-by-someone-else red. */
-tr.mine td{background:#132a1e;text-decoration-color:#5ad18f}
+tr.mine td{background:#132a1e}
+tr.mine td::after{background:#5ad18f}
 tr.mine:hover td{background:#183524}
 .pos{display:inline-block;min-width:34px;text-align:center;border-radius:4px;
   padding:1px 5px;font-size:11px;font-weight:700;color:#0c1220}
