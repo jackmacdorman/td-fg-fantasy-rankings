@@ -5,6 +5,7 @@ Reuses board.json and the curated sleeper/trap notes from build_xlsx so the
 HTML and the spreadsheet can never drift apart.
 """
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -56,7 +57,15 @@ for p in BOARD["players"]:
     })
 
 DATA = json.dumps(players, separators=(",", ":"))
-META = json.dumps({"teams": BOARD["teams"], "starters": STARTERS,
+
+# A sync link encodes players by their index in this list, which is four bytes
+# instead of a name and is what keeps the URL short enough to text. That makes
+# the link meaningless against a board built from a different ranking -- index 7
+# would silently decode to whoever sits 8th today. This stamp lets the importer
+# refuse rather than quietly cross off the wrong players.
+BUILD = hashlib.sha1("\n".join(p["n"] for p in players).encode()).hexdigest()[:8]
+
+META = json.dumps({"teams": BOARD["teams"], "starters": STARTERS, "build": BUILD,
                    "replacement": {k: round(v, 1) for k, v in BOARD["replacement"].items()}})
 
 HTML = """<!DOCTYPE html>
@@ -247,6 +256,16 @@ tr.mine .mineBtn{border-color:#5ad18f;color:#5ad18f}
 .slot.gap .who{color:#4a5568;font-style:italic;font-weight:400}
 .modal .foot{padding:10px 16px;font-size:12px;color:var(--dim);
   border-top:1px solid #232c3d;display:flex;gap:8px;align-items:center}
+.syncSec{padding:13px 16px;border-bottom:1px solid #1d2536}
+.syncSec p{margin:0 0 9px;font-size:12.5px;color:var(--dim);line-height:1.5}
+.syncSec textarea{width:100%;background:#0b1017;border:1px solid var(--line);
+  color:var(--txt);border-radius:6px;padding:8px 9px;font-size:11px;resize:vertical;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.45;
+  word-break:break-all}
+.syncSec textarea:focus{border-color:var(--accent);outline:none}
+.syncRow{display:flex;gap:8px;align-items:center;margin-top:9px}
+#syncMsg{font-size:12px}
+#syncMsg.ok{color:#7ee2a8} #syncMsg.bad{color:#ff9aa2}
 </style>
 </head>
 <body>
@@ -257,7 +276,7 @@ tr.mine .mineBtn{border-color:#5ad18f;color:#5ad18f}
     <div class="spacer"></div>
     <input type="search" id="q" placeholder="Search player or team  (press /)">
     <button id="hide">Hide drafted</button>
-    <button id="undo">Undo</button>
+    <button id="syncBtn" title="Move this draft to your phone or another browser">Sync</button>
     <button id="reset">Reset</button>
   </div>
   <div class="filters" id="filters"></div>
@@ -292,11 +311,33 @@ tr.mine .mineBtn{border-color:#5ad18f;color:#5ad18f}
     <div class="foot" id="teamFoot"></div>
   </div>
 </div>
+<div class="modalBack" id="syncBack" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Sync">
+    <h2>Sync to another device <span class="sub" id="syncCount"></span>
+      <button class="x" id="syncX">Close</button></h2>
+    <div class="syncSec">
+      <p><b>Send this draft somewhere else.</b> The whole state is packed into the
+      link — nothing is uploaded, and there is no account or server involved.
+      Copy it, send it to yourself, open it on the other device.</p>
+      <textarea id="syncOut" rows="3" readonly></textarea>
+      <div class="syncRow"><button id="syncCopy">Copy link</button>
+        <span id="syncMsg"></span></div>
+    </div>
+    <div class="syncSec">
+      <p><b>Or load one from elsewhere.</b> Paste a link here if opening it
+      directly is awkward.</p>
+      <textarea id="syncIn" rows="3" placeholder="Paste a sync link"></textarea>
+      <div class="syncRow"><button id="syncLoad">Load it</button></div>
+    </div>
+    <div class="foot">Sync is a snapshot, not a live connection. Whichever device
+      you carry on drafting on is the one that is right.</div>
+  </div>
+</div>
 <script>
 const P = __DATA__, META = __META__;
 const KEY = "tdfg2026";
-let st = JSON.parse(localStorage.getItem(KEY) || '{"gone":[],"mine":[],"log":[]}');
-let gone = new Set(st.gone), mine = new Set(st.mine), log = st.log || [];
+let st = JSON.parse(localStorage.getItem(KEY) || '{"gone":[],"mine":[]}');
+let gone = new Set(st.gone), mine = new Set(st.mine);
 // Flags start as the board's own sleeper and trap picks and become yours the
 // moment you touch a star. Seeded only when the key is absent, never when it is
 // an empty array -- otherwise unstarring the last player would silently restore
@@ -309,7 +350,7 @@ let sortKey = "r", hideDrafted = false, query = "";
 const POS = ["QB","RB","WR","TE","K","DST"];
 
 const save = () => localStorage.setItem(KEY,
-  JSON.stringify({gone:[...gone], mine:[...mine], log, flags:[...flags]}));
+  JSON.stringify({gone:[...gone], mine:[...mine], flags:[...flags]}));
 
 // Almost every player scores in exactly one category, so 288 rows of "0.0" would
 // be noise. Show a dot instead, and drop the decimal on whole numbers (FG/XP).
@@ -407,15 +448,16 @@ function toggleFlag(name){
 }
 
 function toggle(name, asMine){
-  const wasGone = gone.has(name), wasMine = mine.has(name);
+  // Every action here is its own inverse -- clicking a crossed-off row puts the
+  // player back, clicking Draft on your own pick releases him -- so there is
+  // nothing for an undo stack to do that a second click does not already do.
   if(asMine){
-    if(wasMine){ mine.delete(name); gone.delete(name); }
+    if(mine.has(name)){ mine.delete(name); gone.delete(name); }
     else { mine.add(name); gone.add(name); }
   } else {
-    if(wasGone){ gone.delete(name); mine.delete(name); }
+    if(gone.has(name)){ gone.delete(name); mine.delete(name); }
     else gone.add(name);
   }
-  log.push({name, wasGone, wasMine});
   save(); render();
 }
 
@@ -482,15 +524,121 @@ document.getElementById("teamBtn").onclick=()=>showTeam(true);
 document.getElementById("teamX").onclick=()=>showTeam(false);
 teamBack.onclick=e=>{ if(e.target===teamBack) showTeam(false); };
 
-document.getElementById("undo").onclick=()=>{
-  const last=log.pop(); if(!last) return;
-  last.wasGone?gone.add(last.name):gone.delete(last.name);
-  last.wasMine?mine.add(last.name):mine.delete(last.name);
-  save(); render();
+// ---- Sync ----------------------------------------------------------------
+// This board is a static file with no server behind it, so sync cannot mean a
+// shared account. It means: pack the whole state into the link itself.
+//
+// `gone` and `flags` go in as bitmaps over the player list -- 36 bytes each for
+// 288 players, however many are set. `mine` has to keep its order, because that
+// order is what decides your starting lineup, so it goes in as an explicit index
+// list instead. The result is ~150 characters rather than the ~4KB the names
+// would cost, which is the difference between a link you can text yourself and
+// one no messaging app will carry intact.
+const IDX = new Map(P.map((p,i)=>[p.n,i]));
+const NB = Math.ceil(P.length/8);
+
+const b64 = u8 => btoa(String.fromCharCode(...u8))
+  .replace(/\\+/g,"-").replace(/\\//g,"_").replace(/=+$/,"");
+const unb64 = s => {
+  const bin = atob(s.replace(/-/g,"+").replace(/_/g,"/"));
+  const u = new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++) u[i]=bin.charCodeAt(i);
+  return u;
 };
+
+function encodeState(){
+  const bits = set => { const b=new Uint8Array(NB);
+    set.forEach(n=>{ const i=IDX.get(n); if(i!==undefined) b[i>>3] |= 1<<(i&7); });
+    return b; };
+  const m=[...mine].map(n=>IDX.get(n)).filter(i=>i!==undefined).slice(0,255);
+  const out=new Uint8Array(NB*2 + 1 + m.length*2);
+  out.set(bits(gone),0); out.set(bits(flags),NB);
+  out[NB*2]=m.length;
+  m.forEach((v,k)=>{ out[NB*2+1+k*2]=v>>8; out[NB*2+2+k*2]=v&255; });
+  return META.build + "." + b64(out);
+}
+
+function decodeState(payload){
+  const [build, body] = payload.trim().split(".");
+  if(!body) throw new Error("That does not look like a sync link.");
+  // The link stores positions in the list, not names. Against a board built from
+  // a different ranking every one of them points at the wrong player, and the
+  // failure would be silent -- so refuse instead of guessing.
+  if(build !== META.build)
+    throw new Error("That link came from a different build of the board, so its "+
+                    "player numbers no longer line up. Re-copy it from the other device.");
+  const u=unb64(body);
+  if(u.length < NB*2+1) throw new Error("That link is truncated.");
+  const names = off => { const s=new Set();
+    for(let i=0;i<P.length;i++) if(u[off+(i>>3)] & (1<<(i&7))) s.add(P[i].n);
+    return s; };
+  const g=names(0), f=names(NB), m=new Set();
+  const cnt=u[NB*2];
+  for(let k=0;k<cnt;k++){
+    const v=(u[NB*2+1+k*2]<<8)|u[NB*2+2+k*2];
+    if(P[v]) m.add(P[v].n);
+  }
+  return {gone:g, mine:m, flags:f};
+}
+
+// Loading is destructive, and the state it lands on top of is a live draft.
+function confirmReplace(s){
+  if(!gone.size && !mine.size) return true;
+  return confirm(
+    `Replace this device's draft (${gone.size} off the board, ${mine.size} drafted) `+
+    `with the one in the link (${s.gone.size} off the board, ${s.mine.size} drafted)?`);
+}
+
+const syncBack=document.getElementById("syncBack");
+const syncMsg=document.getElementById("syncMsg");
+const syncLink=()=>location.origin+location.pathname+"#s="+encodeState();
+
+function renderSync(){
+  document.getElementById("syncOut").value=syncLink();
+  document.getElementById("syncCount").textContent=
+    `${gone.size} off the board · ${mine.size} drafted · ${flags.size} flagged`;
+  syncMsg.textContent=""; syncMsg.className="";
+}
+const showSync=v=>{ if(v) renderSync(); syncBack.hidden=!v; };
+document.getElementById("syncBtn").onclick=()=>showSync(true);
+document.getElementById("syncX").onclick=()=>showSync(false);
+syncBack.onclick=e=>{ if(e.target===syncBack) showSync(false); };
+
+document.getElementById("syncCopy").onclick=async()=>{
+  const t=document.getElementById("syncOut");
+  // navigator.clipboard needs a secure context, which a file:// copy of this
+  // board is not. Fall back rather than fail silently on a local open.
+  try{ await navigator.clipboard.writeText(t.value); }
+  catch(err){ t.select(); document.execCommand("copy"); }
+  syncMsg.textContent="Copied."; syncMsg.className="ok";
+};
+document.getElementById("syncLoad").onclick=()=>{
+  const raw=document.getElementById("syncIn").value.trim();
+  const m=/#s=(.+)$/.exec(raw);
+  try{
+    const s=decodeState(decodeURIComponent(m?m[1]:raw));
+    if(!confirmReplace(s)) return;
+    gone=s.gone; mine=s.mine; flags=s.flags; save(); render(); renderSync();
+    syncMsg.textContent="Loaded."; syncMsg.className="ok";
+  }catch(err){ syncMsg.textContent=err.message; syncMsg.className="bad"; }
+};
+
+function importFromHash(){
+  const m=/^#s=(.+)$/.exec(location.hash);
+  if(!m) return;
+  // Strip the hash first, whatever happens next. Left in place it would re-apply
+  // on every reload, quietly undoing any picks made since the link was opened.
+  history.replaceState(null,"",location.pathname+location.search);
+  try{
+    const s=decodeState(decodeURIComponent(m[1]));
+    if(!confirmReplace(s)) return;
+    gone=s.gone; mine=s.mine; flags=s.flags; save();
+  }catch(err){ alert("Could not load that sync link.\\n\\n"+err.message); }
+}
+
 document.getElementById("reset").onclick=()=>{
   if(!confirm("Clear all draft picks?")) return;
-  gone.clear(); mine.clear(); log=[]; save(); render();
+  gone.clear(); mine.clear(); save(); render();
 };
 document.getElementById("hide").onclick=e=>{
   hideDrafted=!hideDrafted; e.target.classList.toggle("on",hideDrafted); render();
@@ -508,6 +656,7 @@ document.addEventListener("keydown",e=>{
   // Escape closes the panel first and stops there, rather than also wiping the
   // search box underneath it -- one key should undo one thing.
   if(e.key==="Escape"){
+    if(!syncBack.hidden){ showSync(false); return; }
     if(!teamBack.hidden){ showTeam(false); return; }
     document.getElementById("q").value="";query="";render();
   }
@@ -582,10 +731,12 @@ function render(){
   s.innerHTML=`Projected starters+bench total <b>${pts.toFixed(0)}</b> pts`;
   rEl.appendChild(s);
 
-  // Undo, Reset and the best-available chips can all change the roster while the
-  // panel is open, so keep it live rather than showing a stale snapshot.
+  // Reset, a sync import and the best-available chips can all change the roster
+  // while the panel is open, so keep it live rather than showing a stale snapshot.
   if(!teamBack.hidden) renderTeam();
+  if(!syncBack.hidden) renderSync();
 }
+importFromHash();
 render();
 </script>
 </body>

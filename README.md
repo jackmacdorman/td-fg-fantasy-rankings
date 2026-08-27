@@ -22,10 +22,33 @@ Roster: 1 QB, 2 RB, 2 WR, 1 TE, 1 K, 1 D/ST · 12 teams.
 **`index.html`** (also written as `draft-board.html`) — single self-contained file for use
 *during* the draft, published to GitHub Pages at the link above. Click a
 row to cross a player off; the **Draft** button assigns him to your roster instead. State lives
-in localStorage, so a reload or an accidental tab close doesn't lose the draft. Undo,
-reset, hide-drafted, position filters, search (`/` to focus), sortable columns, a
+in localStorage, so a reload or an accidental tab close doesn't lose the draft. Reset,
+hide-drafted, position filters, search (`/` to focus), sortable columns, a
 best-available chip per position, a **My Team** panel showing starters and bench, and a
 roster tracker counting your picks against the starting requirements.
+
+There is no Undo button because every action is already its own inverse: clicking a
+crossed-off row puts the player back, and clicking Draft on your own pick releases him.
+
+### Moving a draft between devices
+
+**Sync** packs the entire state — who's off the board, who you drafted and *in what
+order*, and your flags — into the link itself. Copy it, send it to yourself, open it on
+the other device. Nothing is uploaded, there is no account, and no server is involved;
+the board stays a single static file.
+
+It stays textable because it doesn't store names. `gone` and `flags` go in as bitmaps
+over the player list (36 bytes each, however many are set) and `mine` as an index list,
+since its order is what decides your starting lineup. That's ~155 characters against the
+~4KB the names would cost.
+
+The link therefore encodes *positions in the list*, not players, so it is only meaningful
+against the board it was made on. Every link carries a build stamp and the importer
+refuses a mismatch rather than silently crossing off whoever now sits at index 7. Rebuild
+the board mid-draft and your old links stop working — that is the intended behaviour.
+
+Sync is a snapshot, not a live connection. Two devices don't converge; whichever one you
+carry on drafting on is the one that's right.
 
 Filters are multi-select: plain click picks one, **Cmd/Ctrl-click adds or removes**, so you
 can hold RB and WR together in the round where you're choosing between them. An active
