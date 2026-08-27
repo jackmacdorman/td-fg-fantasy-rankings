@@ -94,7 +94,13 @@ th.cat{color:#6f7d97}
    grew its row to 170px against a 33px baseline -- five ordinary rows' worth of
    screen for one note, which is the opposite of what you want while a draft is
    running. The text is still there, in the title attribute. */
-.note{color:var(--dim);font-size:12px;max-width:min(46vw,560px);
+/* 26vw, not 46: the other twelve columns need about 925px between them, so a
+   note wide enough to hit the old cap pushed the star and Draft button off the
+   right edge of anything narrower than ~1500px. Notes are the only column that
+   can afford to give -- they are clipped either way and the whole text is on
+   hover, whereas a Draft button you have to scroll sideways to reach is just
+   broken. 26vw keeps the whole table on screen from 1280px up. */
+.note{color:var(--dim);font-size:12px;max-width:min(26vw,560px);
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 /* Sleepers and traps carry no per-row badge or accent bar. They read as a
    verdict on a player the board has already ranked, and 288 rows of them turn
@@ -106,6 +112,16 @@ th.cat{color:#6f7d97}
   padding:1px 6px;font-size:11px;border-radius:4px}
 .mineBtn:hover{border-color:#5ad18f;color:#5ad18f}
 tr.mine .mineBtn{border-color:#5ad18f;color:#5ad18f}
+/* The star gets its own cell rather than sharing the Draft button's, so 288
+   Draft buttons stay in one straight line whether or not the row is flagged.
+   Transparent border, not none, so starring does not shift the row by a pixel. */
+.starBtn{background:transparent;border:1px solid transparent;color:#39435a;
+  padding:0 3px;font-size:14px;line-height:1.1;border-radius:4px}
+.starBtn:hover{background:transparent;color:#ffd166}
+/* button.on is the filter-pill rule -- solid blue fill, blue border. It matches
+   a lit star too, so every property it sets has to be put back, not just the
+   colour. A starred row was rendering with a blue chip around the glyph. */
+.starBtn.on{color:#ffd166;background:transparent;border-color:transparent;font-weight:400}
 #roster{margin-top:10px;font-size:12px;color:var(--dim);display:flex;gap:12px;flex-wrap:wrap}
 #roster span b{color:var(--txt)}
 .empty{padding:40px;text-align:center;color:var(--dim)}
@@ -169,7 +185,7 @@ tr.mine .mineBtn{border-color:#5ad18f;color:#5ad18f}
       <th data-k="td" class="num cat" title="Projected rushing + receiving TDs, and D/ST return TDs (6 pts each)">TD</th>
       <th data-k="fg" class="num cat" title="Projected field goals made, all distances (3 pts each)">FG</th>
       <th data-k="xp" class="num cat" title="Projected extra points made (1 pt each)">XP</th>
-      <th data-k="c" title="Confidence level in this player's projection: HIGH, MED or LOW.">Conf&nbsp;Lvl</th><th>Notes</th><th></th>
+      <th data-k="c" title="Confidence level in this player's projection: HIGH, MED or LOW.">Conf&nbsp;Lvl</th><th>Notes</th><th></th><th></th>
     </tr></thead>
     <tbody id="tb"></tbody>
   </table>
@@ -188,11 +204,19 @@ const P = [{"r":1,"pr":"RB1","n":"Jahmyr Gibbs","t":"DET","p":"RB","ptd":0.0,"td
 const KEY = "tdfg2026";
 let st = JSON.parse(localStorage.getItem(KEY) || '{"gone":[],"mine":[],"log":[]}');
 let gone = new Set(st.gone), mine = new Set(st.mine), log = st.log || [];
-let filter = "ALL", sortKey = "r", hideDrafted = false, query = "";
+// Flags start as the board's own sleeper and trap picks and become yours the
+// moment you touch a star. Seeded only when the key is absent, never when it is
+// an empty array -- otherwise unstarring the last player would silently restore
+// all seventeen on the next reload.
+let flags = new Set(st.flags === undefined ? P.filter(p=>p.tag).map(p=>p.n) : st.flags);
+// A set, not a string: positions union together, and FLAG intersects whatever
+// positions are active. See the filter handler for why.
+let filter = new Set(["ALL"]);
+let sortKey = "r", hideDrafted = false, query = "";
 const POS = ["QB","RB","WR","TE","K","DST"];
 
 const save = () => localStorage.setItem(KEY,
-  JSON.stringify({gone:[...gone], mine:[...mine], log}));
+  JSON.stringify({gone:[...gone], mine:[...mine], log, flags:[...flags]}));
 
 // Almost every player scores in exactly one category, so 288 rows of "0.0" would
 // be noise. Show a dot instead, and drop the decimal on whole numbers (FG/XP).
@@ -202,14 +226,37 @@ const stat = v => v ? (Number.isInteger(v) ? v : v.toFixed(1))
 // Build filter buttons
 const fEl = document.getElementById("filters");
 const LABEL = {DST:"D/ST", FLAG:"\u2605 Flagged"};
+// Plain click picks one. Cmd/Ctrl-click adds or removes, so you can hold RB and
+// WR together in the round where you are choosing between them.
+//
+// The two kinds of filter compose differently on purpose. Positions are a union
+// -- RB+WR means either -- because they are mutually exclusive and an
+// intersection would always be empty. FLAG is a different axis entirely, so it
+// intersects: RB + star means flagged running backs, which is the question you
+// actually ask, rather than "every RB plus every flagged kicker".
 ["ALL",...POS,"FLAG"].forEach(p=>{
   const b=document.createElement("button");
   b.textContent = LABEL[p] || p; b.dataset.p=p;
-  if(p==="FLAG") b.title="Sleepers and traps — players whose projection misleads in this format";
+  if(p==="FLAG") b.title="Players you have starred, seeded with the board's sleepers and traps. "+
+    "Combines with a position: Cmd/Ctrl-click RB and the star for flagged RBs only.";
+  else if(p==="ALL") b.title="Cmd/Ctrl-click a filter to add it to the selection";
   if(p==="ALL") b.classList.add("on");
-  b.onclick=()=>{filter=p;[...fEl.children].forEach(c=>c.classList.toggle("on",c.dataset.p===p));render();};
+  b.onclick=e=>{
+    if(e.metaKey||e.ctrlKey){
+      if(p==="ALL") filter=new Set(["ALL"]);         // ALL is the reset, not a member
+      else if(filter.has(p)) filter.delete(p);
+      else { filter.delete("ALL"); filter.add(p); }
+    } else filter=new Set([p]);
+    // Deselecting your way down to nothing, or to the star on its own with no
+    // position, is not an empty board -- fall back to every position.
+    if(filter.size===0) filter=new Set(["ALL"]);
+    syncFilterButtons(); render();
+  };
   fEl.appendChild(b);
 });
+function syncFilterButtons(){
+  [...fEl.children].forEach(c=>c.classList.toggle("on", filter.has(c.dataset.p)));
+}
 
 const tb = document.getElementById("tb");
 const rows = new Map();
@@ -246,13 +293,24 @@ function makeRow(pl){
     <td class="num cat">${stat(pl.xp)}</td>
     <td><span class="conf ${pl.c}">${pl.c}</span></td>
     <td class="note" title="${noteAttr}">${note}</td>
+    <td><button class="starBtn" title="Flag this player — shows under the ★ Flagged filter">\u2605</button></td>
     <td><button class="mineBtn" title="Draft to my team">Draft</button></td>`;
   tr.onclick=e=>{
+    // Both buttons sit inside the row, whose own click crosses a player off.
+    // Each has to claim the event or starring a player would also take him off
+    // the board.
     if(e.target.classList.contains("mineBtn")){
       toggle(pl.n, true); e.stopPropagation();
+    } else if(e.target.classList.contains("starBtn")){
+      toggleFlag(pl.n); e.stopPropagation();
     } else toggle(pl.n, false);
   };
   return tr;
+}
+
+function toggleFlag(name){
+  flags.has(name) ? flags.delete(name) : flags.add(name);
+  save(); render();
 }
 
 function toggle(name, asMine){
@@ -363,9 +421,10 @@ document.addEventListener("keydown",e=>{
 });
 
 function render(){
+  const wantPos = POS.filter(p=>filter.has(p));
   let list = P.filter(pl=>{
-    if(filter==="FLAG"){ if(!pl.tag) return false; }
-    else if(filter!=="ALL" && pl.p!==filter) return false;
+    if(filter.has("FLAG") && !flags.has(pl.n)) return false;
+    if(wantPos.length && !wantPos.includes(pl.p)) return false;
     if(hideDrafted && gone.has(pl.n)) return false;
     if(query && !(pl.n.toLowerCase().includes(query)||pl.t.toLowerCase().includes(query))) return false;
     return true;
@@ -388,8 +447,15 @@ function render(){
     if(!tr){ tr = makeRow(pl); rows.set(pl.n, tr); }
     tr.classList.toggle("gone", gone.has(pl.n));
     tr.classList.toggle("mine", mine.has(pl.n));
+    // Rows are cached and reused across renders, so the star has to be re-synced
+    // rather than set once at construction.
+    tr.querySelector(".starBtn").classList.toggle("on", flags.has(pl.n));
     tb.appendChild(tr);
   });
+  // Live count on the filter button, so a star click visibly lands even when the
+  // row you starred is not one the current filter is showing.
+  fEl.querySelector('[data-p="FLAG"]').textContent =
+    flags.size ? `\u2605 Flagged ${flags.size}` : "\u2605 Flagged";
   document.getElementById("empty").hidden = list.length>0;
 
   document.getElementById("count").textContent =

@@ -24,15 +24,27 @@ Roster: 1 QB, 2 RB, 2 WR, 1 TE, 1 K, 1 D/ST · 12 teams.
 row to cross a player off; the **Draft** button assigns him to your roster instead. State lives
 in localStorage, so a reload or an accidental tab close doesn't lose the draft. Undo,
 reset, hide-drafted, position filters, search (`/` to focus), sortable columns, a
-best-available chip per position, and a roster tracker counting your picks against the
-starting requirements.
+best-available chip per position, a **My Team** panel showing starters and bench, and a
+roster tracker counting your picks against the starting requirements.
+
+Filters are multi-select: plain click picks one, **Cmd/Ctrl-click adds or removes**, so you
+can hold RB and WR together in the round where you're choosing between them. Positions
+union — RB+WR means either — but ★ Flagged is a separate axis and *intersects*, so
+Cmd-clicking RB and the star gives you flagged running backs rather than every RB plus
+every flagged kicker.
 
 The **★ Flagged** filter is the one worth knowing about. Sleepers in this format tend to
 rank badly on the board itself — Sean Tucker is #265 — because a low projected TD total
 is exactly what makes a player cheap. Scrolling will never surface them mid-draft; the
-filter will. Individual rows carry no sleeper/trap badge or accent bar: over 288 rows the
-markers became decoration you stop seeing, and the filter reaches the same 17 players
-deliberately. The reasoning still fills each flagged player's Notes cell.
+filter will.
+
+Every row carries a **star** beside its Draft button, and it drives that filter. It starts
+seeded with the board's own 17 sleepers and traps and becomes your list the moment you
+touch it — star a player you've talked yourself into, unstar a trap you disagree with.
+Flags persist alongside the draft state and survive Reset, which clears picks only. There
+are no per-row sleeper/trap badges any more: across 288 rows they read as decoration you
+stop seeing, and the filter reaches the same players deliberately. The reasoning still
+fills each flagged player's Notes cell.
 
 **`2026 TD-FG League Draft Board.xlsx`** — 12 tabs: overall board, one per position,
 plus Strategy, Sleepers, Traps, Sources, and Settings.
