@@ -1,0 +1,235 @@
+{
+  "league_offensive_td": 1307.1,
+  "props_applied": 16,
+  "constants": {
+    "PAT_PER_TD": 0.94,
+    "RUSH_LEAKAGE": 0.95
+  },
+  "warnings": [],
+  "teams": {
+    "LAR": {
+      "points": 453.9,
+      "fgm": 29.0,
+      "td": 50.9,
+      "pass_td": 33.3,
+      "rush_td": 17.5
+    },
+    "BUF": {
+      "points": 443.7,
+      "fgm": 26.0,
+      "td": 49.8,
+      "pass_td": 25.2,
+      "rush_td": 24.6
+    },
+    "DET": {
+      "points": 443.7,
+      "fgm": 31.0,
+      "td": 48.6,
+      "pass_td": 30.3,
+      "rush_td": 18.3
+    },
+    "CIN": {
+      "points": 442.0,
+      "fgm": 29.0,
+      "td": 48.8,
+      "pass_td": 36.1,
+      "rush_td": 12.7
+    },
+    "BAL": {
+      "points": 440.3,
+      "fgm": 29.0,
+      "td": 48.3,
+      "pass_td": 28.5,
+      "rush_td": 19.9
+    },
+    "DAL": {
+      "points": 436.9,
+      "fgm": 35.0,
+      "td": 44.6,
+      "pass_td": 30.3,
+      "rush_td": 14.2
+    },
+    "SF": {
+      "points": 425.0,
+      "fgm": 31.0,
+      "td": 45.7,
+      "pass_td": 29.3,
+      "rush_td": 16.5
+    },
+    "GB": {
+      "points": 421.6,
+      "fgm": 29.0,
+      "td": 46.4,
+      "pass_td": 28.8,
+      "rush_td": 17.6
+    },
+    "SEA": {
+      "points": 421.6,
+      "fgm": 39.0,
+      "td": 40.3,
+      "pass_td": 24.9,
+      "rush_td": 15.4
+    },
+    "CHI": {
+      "points": 418.2,
+      "fgm": 32.0,
+      "td": 43.9,
+      "pass_td": 27.6,
+      "rush_td": 16.3
+    },
+    "KC": {
+      "points": 409.7,
+      "fgm": 33.0,
+      "td": 42.5,
+      "pass_td": 26.7,
+      "rush_td": 15.8
+    },
+    "LAC": {
+      "points": 404.6,
+      "fgm": 35.0,
+      "td": 41.4,
+      "pass_td": 26.4,
+      "rush_td": 15.0
+    },
+    "NE": {
+      "points": 404.6,
+      "fgm": 26.0,
+      "td": 44.4,
+      "pass_td": 27.2,
+      "rush_td": 17.2
+    },
+    "PHI": {
+      "points": 404.6,
+      "fgm": 26.0,
+      "td": 44.9,
+      "pass_td": 24.3,
+      "rush_td": 20.6
+    },
+    "JAX": {
+      "points": 399.5,
+      "fgm": 29.0,
+      "td": 42.2,
+      "pass_td": 26.5,
+      "rush_td": 15.7
+    },
+    "WAS": {
+      "points": 399.5,
+      "fgm": 27.0,
+      "td": 44.0,
+      "pass_td": 25.3,
+      "rush_td": 18.7
+    },
+    "IND": {
+      "points": 397.8,
+      "fgm": 34.0,
+      "td": 40.0,
+      "pass_td": 21.8,
+      "rush_td": 18.2
+    },
+    "TB": {
+      "points": 396.1,
+      "fgm": 33.0,
+      "td": 40.6,
+      "pass_td": 25.9,
+      "rush_td": 14.7
+    },
+    "HOU": {
+      "points": 382.5,
+      "fgm": 39.0,
+      "td": 35.3,
+      "pass_td": 23.4,
+      "rush_td": 11.9
+    },
+    "MIN": {
+      "points": 380.8,
+      "fgm": 33.0,
+      "td": 37.7,
+      "pass_td": 24.6,
+      "rush_td": 13.1
+    },
+    "DEN": {
+      "points": 379.1,
+      "fgm": 30.0,
+      "td": 38.7,
+      "pass_td": 24.5,
+      "rush_td": 14.2
+    },
+    "NYG": {
+      "points": 375.7,
+      "fgm": 27.0,
+      "td": 40.0,
+      "pass_td": 22.7,
+      "rush_td": 17.3
+    },
+    "NO": {
+      "points": 365.5,
+      "fgm": 30.0,
+      "td": 37.3,
+      "pass_td": 23.9,
+      "rush_td": 13.4
+    },
+    "PIT": {
+      "points": 363.8,
+      "fgm": 25.0,
+      "td": 39.0,
+      "pass_td": 25.9,
+      "rush_td": 13.1
+    },
+    "ATL": {
+      "points": 360.4,
+      "fgm": 30.0,
+      "td": 36.2,
+      "pass_td": 21.6,
+      "rush_td": 14.7
+    },
+    "CAR": {
+      "points": 353.6,
+      "fgm": 24.0,
+      "td": 38.3,
+      "pass_td": 24.8,
+      "rush_td": 13.5
+    },
+    "TEN": {
+      "points": 350.2,
+      "fgm": 29.0,
+      "td": 35.5,
+      "pass_td": 23.5,
+      "rush_td": 12.0
+    },
+    "LV": {
+      "points": 326.4,
+      "fgm": 23.0,
+      "td": 34.5,
+      "pass_td": 21.8,
+      "rush_td": 12.7
+    },
+    "MIA": {
+      "points": 323.0,
+      "fgm": 27.0,
+      "td": 32.5,
+      "pass_td": 18.0,
+      "rush_td": 14.5
+    },
+    "CLE": {
+      "points": 317.9,
+      "fgm": 23.0,
+      "td": 32.9,
+      "pass_td": 21.5,
+      "rush_td": 11.4
+    },
+    "NYJ": {
+      "points": 314.5,
+      "fgm": 29.0,
+      "td": 30.4,
+      "pass_td": 19.3,
+      "rush_td": 11.0
+    },
+    "ARI": {
+      "points": 312.8,
+      "fgm": 26.0,
+      "td": 31.7,
+      "pass_td": 19.8,
+      "rush_td": 12.0
+    }
+  }
+}

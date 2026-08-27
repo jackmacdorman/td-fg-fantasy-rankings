@@ -1,0 +1,289 @@
+name,team,pos,pass_td,rush_td,rec_td,fg,pat,dst_td,safety,confidence,source,notes
+Josh Allen,BUF,QB,24.67,11.16,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 24.5; draftkings 11.5),Clear QB1 but no longer a tier of one. 11.2 rush TDs alone outscore 9 of 37 QBs in total
+Jalen Hurts,PHI,QB,22.67,8.24,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 22.5; draftkings 8.5),Tush push survived 2026 rules vote; goal-line sneak intact
+Joe Burrow,CIN,QB,32.67,2.09,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 32.5),Volume passer; CIN 26.0 implied pts
+Drake Maye,NE,QB,26.67,3.63,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 26.5; draftkings 3.5),NE 10.5 win total
+Trevor Lawrence,JAX,QB,25.67,4.91,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 25.5),
+Matthew Stafford,LAR,QB,30.67,0.44,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 30.5),LAR highest implied pts 26.6 but zero rush value
+Dak Prescott,DAL,QB,27.67,2.03,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 27.5),
+Jaxson Dart,NYG,QB,19.67,5.87,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 19.5; draftkings 5.5),BIGGEST ADP ARBITRAGE. But new HC Harbaugh may curb rushing
+Brock Purdy,SF,QB,27.67,3.97,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 27.5),
+Lamar Jackson,BAL,QB,24.67,3.75,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 24.5; draftkings 3.5),BAL 11.5 win total
+Jayden Daniels,WAS,QB,21.67,4.76,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 21.5; draftkings 4.5),
+Bo Nix,DEN,QB,24.67,3.26,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 24.5),
+Caleb Williams,CHI,QB,24.67,2.98,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 24.5),
+Justin Herbert,LAC,QB,25.67,2.4,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 25.5),
+Patrick Mahomes,KC,QB,25.67,3.06,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 25.5),INJURY RISK: torn ACL+LCL 2025; no preseason snaps
+Jared Goff,DET,QB,29.67,0.54,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 29.5),DET 26.1 implied pts; no rush value
+Daniel Jones,IND,QB,19.67,5.32,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 19.5),VALUE: Clay 6 rush TD Razzball 7.3; nobody drafts him for that
+Tyler Shough,NO,QB,20.67,5.19,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 20.5),
+Jordan Love,GB,QB,24.67,1.55,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 24.5),
+Baker Mayfield,TB,QB,25.67,1.61,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 25.5),
+Sam Darnold,SEA,QB,23.67,0.91,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 23.5),
+Kyler Murray,MIN,QB,18.67,2.86,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 18.5),Named Week 1 starter over McCarthy
+Bryce Young,CAR,QB,20.67,2.98,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 20.5),
+C.J. Stroud,HOU,QB,22.67,1.31,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 22.5),Vegas is fading him
+Aaron Rodgers,PIT,QB,21.67,1.63,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 21.5),
+Geno Smith,NYJ,QB,19.34,1.68,0.0,0.0,0.0,0.0,0.0,MEDIUM,"Vegas team budget, share from projections",NYJ lowest implied total 18.4
+Malik Willis,MIA,QB,14.67,4.1,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 14.5; draftkings 3.5),LOTTERY TICKET: Yahoo proj 7 rush TD Razzball 2.8
+Cam Ward,TEN,QB,20.67,2.1,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 20.5),
+Jacoby Brissett,ARI,QB,11.67,1.32,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (caesars 11.5),ARI 3.5 win total worst in NFL
+Fernando Mendoza,LV,QB,12.67,1.62,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (caesars 12.5),Rookie No.1 overall; Cousins starts Week 1 but handoff expected
+Shedeur Sanders,CLE,QB,8.86,1.54,0.0,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",Watson named starter but Clay projects Sanders more volume
+Tua Tagovailoa,ATL,QB,12.94,0.0,0.0,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",ATL QB job unsettled; no rush value either way
+Deshaun Watson,CLE,QB,12.67,1.03,0.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 12.5),Named Week 1 starter; sources conflict badly
+Michael Penix Jr.,ATL,QB,8.62,0.97,0.0,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",Recovering from torn ACL not fully cleared
+Justin Fields,KC,QB,1.03,1.02,0.0,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",BEST HANDCUFF IN FORMAT: rushing QB behind Mahomes ACL recovery
+Kirk Cousins,LV,QB,9.1,0.0,0.0,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+J.J. McCarthy,MIN,QB,5.94,0.95,0.0,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",Lost job to Murray
+Jahmyr Gibbs,DET,RB,0.0,12.22,4.03,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 12.5; draftkings 4.5),Overall RB1
+Jonathan Taylor,IND,RB,0.0,11.57,1.18,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 11.5),True goal-line back
+Christian McCaffrey,SF,RB,0.0,8.52,4.35,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 8.5; draftkings 4.5),Goal-line yes
+Derrick Henry,BAL,RB,0.0,12.73,0.7,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 12.5),Vegas HIGHER than consensus here
+James Cook III,BUF,RB,0.0,10.29,1.68,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 10.5),Allen vulture tax already priced into line
+Josh Jacobs,GB,RB,0.0,11.65,1.5,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Goal-line yes
+Bijan Robinson,ATL,RB,0.0,9.21,3.55,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (fanduel 9.5; draftkings 3.5),CAUTION only 48 pct of inside-5 carries in 2025
+Kyren Williams,LAR,RB,0.0,9.87,1.79,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 9.5),Alternates drives with Corum
+Javonte Williams,DAL,RB,0.0,9.7,1.42,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 9.5),Goal-line yes
+Omarion Hampton,LAC,RB,0.0,8.04,1.82,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 7.5),Goal-line yes
+Chase Brown,CIN,RB,0.0,5.97,4.55,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),Vegas LOWER than consensus
+Saquon Barkley,PHI,RB,0.0,7.76,2.29,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 7.5),TRAP: Hurts vultures 8.5 rush TDs; not priced in
+Kenneth Walker III,KC,RB,0.0,7.71,1.54,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 7.5),New to KC; no established GL hierarchy
+Ashton Jeanty,LV,RB,0.0,7.67,2.41,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 7.5),Goal-line yes
+De'Von Achane,MIA,RB,0.0,5.19,4.24,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),Not the goal-line back
+Jeremiyah Love,ARI,RB,0.0,5.79,2.68,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),Rookie; opened camp as RB2 behind Allgeier
+Breece Hall,NYJ,RB,0.0,4.98,2.1,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (fanduel 5.5),Groin strain Aug 17; expected Week 1
+Jadarian Price,SEA,RB,0.0,6.82,1.02,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Rookie; leads while Charbonnet rehabs
+Cam Skattebo,NYG,RB,0.0,6.44,1.35,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 6.5),Goal-line yes
+D'Andre Swift,CHI,RB,0.0,7.07,1.54,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 7.5),
+Rhamondre Stevenson,NE,RB,0.0,6.07,1.61,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),Goal-line yes
+Bhayshul Tuten,JAX,RB,0.0,5.45,1.85,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),But Rodriguez owns goal line
+Bucky Irving,TB,RB,0.0,4.98,1.88,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),TRAP: ZERO carries inside the 5 in 2025
+Quinshon Judkins,CLE,RB,0.0,6.77,0.69,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 6.5),Goal-line yes
+TreVeyon Henderson,NE,RB,0.0,7.67,1.2,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 7.5),Not the goal-line back
+David Montgomery,HOU,RB,0.0,7.49,0.84,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 7.5),Traded DET to HOU
+J.K. Dobbins,DEN,RB,0.0,5.45,0.85,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),Goal-line yes
+Travis Etienne Jr.,NO,RB,0.0,5.2,2.44,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),Traded JAX to NO
+Jacory Croskey-Merritt,WAS,RB,0.0,7.55,0.33,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Goal-line yes but rookie Kaytron Allen vultures
+Blake Corum,LAR,RB,0.0,5.87,0.3,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Alternates drives with Kyren
+Rachaad White,WAS,RB,0.0,5.24,2.09,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Signed TB to WAS
+Jaylen Warren,PIT,RB,0.0,5.15,2.51,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),True 50-50 with Dowdle
+Rico Dowdle,PIT,RB,0.0,5.17,1.54,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),True 50-50 with Warren
+Chuba Hubbard,CAR,RB,0.0,4.67,1.41,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Tony Pollard,TEN,RB,0.0,5.33,1.12,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Kyle Monangai,CHI,RB,0.0,5.17,0.98,0.0,0.0,0.0,0.0,MEDIUM,"Vegas team budget, share from projections",
+Jordan Mason,MIN,RB,0.0,5.44,0.11,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Goal-line yes; Vegas lower than consensus
+RJ Harvey,DEN,RB,0.0,2.8,2.63,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Kenny Gainwell,TB,RB,0.0,4.08,1.98,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Zach Charbonnet,SEA,RB,0.0,4.54,0.65,0.0,0.0,0.0,0.0,MEDIUM,"Vegas team budget, share from projections",Torn ACL Feb surgery; on PUP; ESPN number too aggressive
+Jonathon Brooks,CAR,RB,0.0,5.0,1.3,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Repeat ACL history
+Aaron Jones Sr.,MIN,RB,0.0,2.96,1.73,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Isiah Pacheco,DET,RB,0.0,4.09,0.56,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Signed KC to DET
+Brian Robinson Jr.,ATL,RB,0.0,3.78,0.1,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Vultures Bijan at goal line
+Tyjae Spears,TEN,RB,0.0,3.5,1.83,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Chris Rodriguez Jr.,JAX,RB,0.0,4.03,0.11,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",SLEEPER: hand-picked by Coen as goal-line back over Tuten
+Woody Marks,HOU,RB,0.0,2.19,1.16,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Samaje Perine,CIN,RB,0.0,3.63,1.01,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Alvin Kamara,NO,RB,0.0,2.31,1.71,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Declining
+Tyler Allgeier,ARI,RB,0.0,4.1,0.25,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Opened camp ahead of rookie Love
+Tank Bigsby,PHI,RB,0.0,3.41,0.11,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Ty Johnson,BUF,RB,0.0,1.02,1.49,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+MarShawn Lloyd,GB,RB,0.0,2.99,0.35,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Braelon Allen,NYJ,RB,0.0,3.36,0.18,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Keaton Mitchell,LAC,RB,0.0,2.12,0.86,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Justice Hill,BAL,RB,0.0,1.81,1.64,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Sean Tucker,TB,RB,0.0,2.9,0.1,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",BIGGEST SLEEPER: owns TB goal line; scored 8 TD in 2025 6 in final 8 games; projection is a volume artifact
+Dylan Sampson,CLE,RB,0.0,1.13,1.37,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Jonah Coleman,DEN,RB,0.0,1.86,0.38,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Rookie GL insurance
+Ray Davis,BUF,RB,0.0,1.02,0.65,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Najee Harris,NYG,RB,0.0,2.46,0.23,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Signed to NYG
+Mike Washington Jr.,LV,RB,0.0,2.26,0.12,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Rookie backup to Jeanty
+George Holani,SEA,RB,0.0,1.64,0.09,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Tyrone Tracy Jr.,NYG,RB,0.0,1.41,0.79,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Kaelon Black,SF,RB,0.0,1.82,0.22,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Rookie
+Kimani Vidal,LAC,RB,0.0,1.54,0.19,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Jaydon Blue,DAL,RB,0.0,1.52,0.24,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Jaylen Wright,MIA,RB,0.0,3.81,0.13,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Emmett Johnson,KC,RB,0.0,1.33,0.19,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",Rookie
+Emari Demercado,KC,RB,0.0,1.23,0.29,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Ja'Marr Chase,CIN,WR,0.0,0.14,10.29,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 10.5),
+Davante Adams,LAR,WR,0.0,0.0,9.31,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 9.5),
+Amon-Ra St. Brown,DET,WR,0.0,0.11,9.71,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 9.5),
+Puka Nacua,LAR,WR,0.0,0.53,9.67,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 9.5),
+CeeDee Lamb,DAL,WR,0.0,0.1,7.63,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 7.5),
+Jaxon Smith-Njigba,SEA,WR,0.0,0.09,8.33,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 8.5),
+Rashee Rice,KC,WR,0.0,0.31,7.67,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 7.5),
+Tee Higgins,CIN,WR,0.0,0.0,8.23,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 8.5),
+Rome Odunze,CHI,WR,0.0,0.0,6.04,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+George Pickens,DAL,WR,0.0,0.0,6.91,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 6.5),
+Malik Nabers,NYG,WR,0.0,0.12,6.04,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Emeka Egbuka,TB,WR,0.0,0.11,7.67,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 7.5),
+Courtland Sutton,DEN,WR,0.0,0.0,6.5,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 6.5),
+Justin Jefferson,MIN,WR,0.0,0.1,6.98,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 6.5),
+Drake London,ATL,WR,0.0,0.0,7.35,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 7.5),
+Christian Watson,GB,WR,0.0,0.1,6.29,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 6.5),
+A.J. Brown,NE,WR,0.0,0.0,7.26,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 7.5),
+Nico Collins,HOU,WR,0.0,0.09,6.84,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 6.5),
+Brock Bowers,LV,TE,0.0,0.11,7.07,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 7.5),
+Chris Olave,NO,WR,0.0,0.0,5.89,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Mark Andrews,BAL,TE,0.0,0.32,6.23,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 6.5),
+D.J. Moore,BUF,WR,0.0,0.13,6.29,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 6.5),
+Jameson Williams,DET,WR,0.0,0.32,5.58,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Mike Evans,SF,WR,0.0,0.0,6.57,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 6.5),
+Trey McBride,ARI,TE,0.0,0.0,6.5,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 6.5),
+Ladd McConkey,LAC,WR,0.0,0.0,5.83,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+DK Metcalf,PIT,WR,0.0,0.0,5.58,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Jaylen Waddle,DEN,WR,0.0,0.09,5.58,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+DeVonta Smith,PHI,WR,0.0,0.0,5.6,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Colston Loveland,CHI,TE,0.0,0.0,6.07,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Tetairoa McMillan,CAR,WR,0.0,0.0,6.57,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 6.5),
+Terry McLaurin,WAS,WR,0.0,0.0,5.83,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Zay Flowers,BAL,WR,0.0,0.21,5.58,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Quentin Johnston,LAC,WR,0.0,0.1,5.76,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Dallas Goedert,PHI,TE,0.0,0.0,4.87,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Luther Burden III,CHI,WR,0.0,0.2,4.59,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Jake Ferguson,DAL,TE,0.0,0.0,5.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Marvin Harrison Jr.,ARI,WR,0.0,0.0,5.24,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Tyler Warren,IND,TE,0.0,0.21,5.32,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+George Kittle,SF,TE,0.0,0.0,5.89,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Romeo Doubs,NE,WR,0.0,0.0,5.0,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Hunter Henry,NE,TE,0.0,0.0,4.33,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Alec Pierce,IND,WR,0.0,0.0,4.7,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Terrance Ferguson,LAR,TE,0.0,0.0,5.18,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Sam LaPorta,DET,TE,0.0,0.0,4.67,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Jakobi Meyers,JAX,WR,0.0,0.11,5.55,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Jordan Addison,MIN,WR,0.0,0.1,4.42,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Garrett Wilson,NYJ,WR,0.0,0.11,4.98,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Parker Washington,JAX,WR,0.0,0.11,4.7,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Brian Thomas Jr.,JAX,WR,0.0,0.11,4.53,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Jayden Reed,GB,WR,0.0,0.21,5.42,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Matthew Golden,GB,WR,0.0,0.1,5.54,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Deebo Samuel Sr.,SF,WR,0.0,1.25,4.67,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Tucker Kraft,GB,TE,0.0,0.1,5.4,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Carnell Tate,TEN,WR,0.0,0.0,4.33,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Chris Godwin,TB,WR,0.0,0.0,4.81,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Dalton Kincaid,BUF,TE,0.0,0.0,4.17,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 3.5),
+Makai Lemon,PHI,WR,0.0,0.0,5.67,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 5.5),
+Xavier Worthy,KC,WR,0.0,0.31,4.14,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+De'Zhaun Stribling,SF,WR,0.0,0.0,4.86,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Michael Pittman Jr.,PIT,WR,0.0,0.0,4.42,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Travis Kelce,KC,TE,0.0,0.0,4.67,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Stefon Diggs,WAS,WR,0.0,0.0,4.81,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Harold Fannin Jr.,CLE,TE,0.0,0.1,4.93,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Jalen McMillan,TB,WR,0.0,0.21,3.86,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Rashod Bateman,BAL,WR,0.0,0.0,4.69,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+AJ Barner,SEA,TE,0.0,0.18,3.53,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Rashid Shaheed,SEA,WR,0.0,0.45,3.25,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Khalil Shakir,BUF,WR,0.0,0.06,3.64,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Brenton Strange,JAX,TE,0.0,0.0,4.35,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Darren Waller,CAR,TE,0.0,0.0,4.71,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Isaiah Likely,NYG,TE,0.0,0.0,4.5,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Mike Gesicki,CIN,TE,0.0,0.0,4.92,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Pat Freiermuth,PIT,TE,0.0,0.0,5.44,0.0,0.0,0.0,0.0,MEDIUM,"Vegas team budget, share from projections",
+Michael Wilson,ARI,WR,0.0,0.0,4.72,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Adonai Mitchell,NYJ,WR,0.0,0.11,3.15,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Calvin Ridley,TEN,WR,0.0,0.28,4.67,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Kyle Pitts,ATL,TE,0.0,0.0,4.76,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+David Njoku,LAC,TE,0.0,0.0,3.35,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Ja'Kobi Lane,BAL,WR,0.0,0.0,4.1,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Josh Downs,IND,WR,0.0,0.11,3.07,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Devaughn Vele,NO,WR,0.0,0.0,4.16,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Travis Hunter,JAX,WR,0.0,0.11,3.59,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+KC Concepcion,CLE,WR,0.0,0.21,3.67,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 3.5),
+Jauan Jennings,MIN,WR,0.0,0.0,3.57,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Isaac TeSlaa,DET,WR,0.0,0.0,4.51,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Jalen Nailor,LV,WR,0.0,0.11,3.61,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Gunnar Helm,TEN,TE,0.0,0.0,4.35,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Tyquan Thornton,KC,WR,0.0,0.0,2.89,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Jalen Coker,CAR,WR,0.0,0.0,3.53,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Chigoziem Okonkwo,WAS,TE,0.0,0.0,3.3,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Kenyon Sadiq,NYJ,TE,0.0,0.0,2.63,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Dalton Schultz,HOU,TE,0.0,0.0,3.17,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Denzel Boston,CLE,WR,0.0,0.0,3.67,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 3.5),
+Colby Parkinson,LAR,TE,0.0,0.0,2.99,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Greg Dulcich,MIA,TE,0.0,0.0,3.72,0.0,0.0,0.0,0.0,MEDIUM,"Vegas team budget, share from projections",
+Dontayvion Wicks,PHI,WR,0.0,0.0,3.16,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Juwan Johnson,NO,TE,0.0,0.0,3.54,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+T.J. Hockenson,MIN,TE,0.0,0.0,3.14,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Germie Bernard,PIT,WR,0.0,0.16,3.91,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Dawson Knox,BUF,TE,0.0,0.0,2.71,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Ryan Flournoy,DAL,WR,0.0,0.1,3.2,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Keon Coleman,BUF,WR,0.0,0.0,2.62,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Tre Tucker,LV,WR,0.0,0.32,3.01,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Cooper Kupp,SEA,WR,0.0,0.0,2.6,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Kayshon Boutte,HOU,WR,0.0,0.0,2.96,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Jerry Jeudy,CLE,WR,0.0,0.0,2.31,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Keenan Allen,IND,WR,0.0,0.0,4.67,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 4.5),
+Jordyn Tyson,NO,WR,0.0,0.0,3.3,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Xavier Legette,CAR,WR,0.0,0.12,3.06,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Jaylin Noel,HOU,WR,0.0,0.09,2.64,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Wan'Dale Robinson,TEN,WR,0.0,0.14,3.51,0.0,0.0,0.0,0.0,HIGH,"Vegas team budget, share from projections",
+Tank Dell,HOU,WR,0.0,0.18,2.53,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Tre' Harris,LAC,WR,0.0,0.0,2.39,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Antonio Williams,WAS,WR,0.0,0.21,2.53,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Omar Cooper Jr.,NYJ,WR,0.0,0.11,3.67,0.0,0.0,0.0,0.0,HIGH,POSTED LINE (draftkings 3.5),
+Jahan Dotson,ATL,WR,0.0,0.0,2.3,0.0,0.0,0.0,0.0,LOW,"Vegas team budget, share from projections",
+Jason Myers,SEA,K,0.0,0.0,0.0,39.0,37.86,0.0,0.0,HIGH,Vegas team total -> FG/XP budget,Led NFL 43 FGM 2025 on 48 FGA
+Ka'imi Fairbairn,HOU,K,0.0,0.0,0.0,39.0,33.16,0.0,0.0,HIGH,Vegas team total -> FG/XP budget,Best FG-lean in league; HOU led NFL 52 FGA
+Brandon Aubrey,DAL,K,0.0,0.0,0.0,35.0,41.88,0.0,0.0,HIGH,Vegas team total -> FG/XP budget,
+Blake Grupe,IND,K,0.0,0.0,0.0,34.0,37.63,0.0,0.0,MEDIUM,Vegas team total -> FG/XP budget,Shrader listed as backup
+Cameron Dicker,LAC,K,0.0,0.0,0.0,35.0,38.92,0.0,0.0,HIGH,Vegas team total -> FG/XP budget,92.7 pct in 2025; strong FG lean
+Jake Bates,DET,K,0.0,0.0,0.0,31.0,45.71,0.0,0.0,HIGH,Vegas team total -> FG/XP budget,XP-heavy; TD offense caps him
+Cairo Santos,CHI,K,0.0,0.0,0.0,32.0,41.22,0.0,0.0,HIGH,Vegas team total -> FG/XP budget,39 FGA in 2025
+Will Reichard,MIN,K,0.0,0.0,0.0,33.0,35.4,0.0,0.0,HIGH,Vegas team total -> FG/XP budget,94.3 pct in 2025
+Chase McLaughlin,TB,K,0.0,0.0,0.0,33.0,38.13,0.0,0.0,HIGH,Vegas team total -> FG/XP budget,
+Harrison Mevis,LAR,K,0.0,0.0,0.0,29.0,47.8,0.0,0.0,MEDIUM,Vegas team total -> FG/XP budget,Most TD-heavy K; LAR led NFL RZ trips
+Harrison Butker,KC,K,0.0,0.0,0.0,33.0,39.97,0.0,0.0,HIGH,Vegas team total -> FG/XP budget,Strong FG lean
+Tyler Loop,BAL,K,0.0,0.0,0.0,29.0,45.42,0.0,0.0,MEDIUM,Vegas team total -> FG/XP budget,Year 2; BAL 11.5 win total
+Cam Little,JAX,K,0.0,0.0,0.0,29.0,39.71,0.0,0.0,HIGH,Vegas team total -> FG/XP budget,
+Wil Lutz,DEN,K,0.0,0.0,0.0,30.0,36.38,0.0,0.0,HIGH,Vegas team total -> FG/XP budget,
+Evan McPherson,CIN,K,0.0,0.0,0.0,29.0,45.83,0.0,0.0,HIGH,Vegas team total -> FG/XP budget,Only 28 FGA in 2025
+Eddy Pineiro,SF,K,0.0,0.0,0.0,31.0,42.99,0.0,0.0,MEDIUM,Vegas team total -> FG/XP budget,
+Nick Folk,ATL,K,0.0,0.0,0.0,30.0,34.05,0.0,0.0,MEDIUM,Vegas team total -> FG/XP budget,Age risk
+Daniel Carlson,NO,K,0.0,0.0,0.0,30.0,35.05,0.0,0.0,LOW,Vegas team total -> FG/XP budget,Published projections stale (built on Smyth); NO 42 FGA at 71.4 pct = upside
+Trey Smack,GB,K,0.0,0.0,0.0,29.0,43.57,0.0,0.0,LOW,Vegas team total -> FG/XP budget,Rookie 6th rounder
+Jason Sanders,NYJ,K,0.0,0.0,0.0,29.0,28.53,0.0,0.0,HIGH,Vegas team total -> FG/XP budget,Won job; York waived
+Tyler Bass,BUF,K,0.0,0.0,0.0,26.0,46.79,0.0,0.0,MEDIUM,Vegas team total -> FG/XP budget,TRAP: BUF had fewest FGA in NFL (21) in 2025
+Joey Slye,TEN,K,0.0,0.0,0.0,29.0,33.38,0.0,0.0,MEDIUM,Vegas team total -> FG/XP budget,
+Andres Borregales,NE,K,0.0,0.0,0.0,26.0,41.78,0.0,0.0,MEDIUM,Vegas team total -> FG/XP budget,
+Drew Stevens,WAS,K,0.0,0.0,0.0,27.0,41.37,0.0,0.0,LOW,Vegas team total -> FG/XP budget,Rookie
+Riley Patterson,MIA,K,0.0,0.0,0.0,27.0,30.54,0.0,0.0,LOW,Vegas team total -> FG/XP budget,Zane Gonzalez on roster
+Jake Elliott,PHI,K,0.0,0.0,0.0,26.0,42.17,0.0,0.0,MEDIUM,Vegas team total -> FG/XP budget,74.1 pct in 2025 (worst); PHI best RZ TD pct
+Chad Ryland,ARI,K,0.0,0.0,0.0,26.0,29.83,0.0,0.0,MEDIUM,Vegas team total -> FG/XP budget,ARI 4.5 win total
+Giants Kicker,NYG,K,0.0,0.0,0.0,27.0,37.62,0.0,0.0,LOW,Vegas team total -> FG/XP budget,Open battle Sauls vs Zvada; avoid
+Chris Boswell,PIT,K,0.0,0.0,0.0,25.0,36.65,0.0,0.0,MEDIUM,Vegas team total -> FG/XP budget,
+Ryan Fitzgerald,CAR,K,0.0,0.0,0.0,24.0,36.03,0.0,0.0,LOW,Vegas team total -> FG/XP budget,
+Matt Gay,LV,K,0.0,0.0,0.0,23.0,32.41,0.0,0.0,MEDIUM,Vegas team total -> FG/XP budget,LV 5.5 win total
+Andre Szmyt,CLE,K,0.0,0.0,0.0,23.0,30.93,0.0,0.0,LOW,Vegas team total -> FG/XP budget,CLE 7.8 win total
+Seahawks D/ST,SEA,DST,0.0,0.0,0.0,0.0,0.0,3.47,0.5,LOW,Model est. -- no market prices defensive TDs,Only team with 3+ def TD all 3 yrs; Tory Horton PR
+Cowboys D/ST,DAL,DST,0.0,0.0,0.0,0.0,0.0,3.14,0.45,LOW,Model est. -- no market prices defensive TDs,KaVontae Turpin led NFL KR yds 2025
+Texans D/ST,HOU,DST,0.0,0.0,0.0,0.0,0.0,2.79,0.65,LOW,Model est. -- no market prices defensive TDs,3 FR TD in 2025; elite pass rush; weak returns
+Browns D/ST,CLE,DST,0.0,0.0,0.0,0.0,0.0,2.79,0.6,LOW,Model est. -- no market prices defensive TDs,3 INT TD on only 11 INTs; bad offense = more snaps
+Broncos D/ST,DEN,DST,0.0,0.0,0.0,0.0,0.0,2.77,0.65,LOW,Model est. -- no market prices defensive TDs,Marvin Mims led PR yds 2025
+Vikings D/ST,MIN,DST,0.0,0.0,0.0,0.0,0.0,2.77,0.6,LOW,Model est. -- no market prices defensive TDs,Led NFL forced fumbles 2025
+Bills D/ST,BUF,DST,0.0,0.0,0.0,0.0,0.0,2.77,0.5,LOW,Model est. -- no market prices defensive TDs,Consistent 2-3 def TD/yr
+Jaguars D/ST,JAX,DST,0.0,0.0,0.0,0.0,0.0,2.63,0.55,LOW,Model est. -- no market prices defensive TDs,Parker Washington 3 PR TD in 2 yrs
+Falcons D/ST,ATL,DST,0.0,0.0,0.0,0.0,0.0,2.6,0.5,LOW,Model est. -- no market prices defensive TDs,4 def TD in 2024; Branch return upside
+Patriots D/ST,NE,DST,0.0,0.0,0.0,0.0,0.0,2.47,0.5,LOW,Model est. -- no market prices defensive TDs,Marcus Jones 2 PR TD 2025; best PR unit
+Steelers D/ST,PIT,DST,0.0,0.0,0.0,0.0,0.0,2.45,0.6,LOW,Model est. -- no market prices defensive TDs,3 def TD 2025
+Raiders D/ST,LV,DST,0.0,0.0,0.0,0.0,0.0,2.45,0.55,LOW,Model est. -- no market prices defensive TDs,5 def TD in 2023 then 1 then 0
+Colts D/ST,IND,DST,0.0,0.0,0.0,0.0,0.0,2.45,0.5,LOW,Model est. -- no market prices defensive TDs,
+Ravens D/ST,BAL,DST,0.0,0.0,0.0,0.0,0.0,2.43,0.55,LOW,Model est. -- no market prices defensive TDs,Steady 1-2/yr
+Bears D/ST,CHI,DST,0.0,0.0,0.0,0.0,0.0,2.43,0.5,LOW,Model est. -- no market prices defensive TDs,Led NFL 23 INTs 2025
+Jets D/ST,NYJ,DST,0.0,0.0,0.0,0.0,0.0,2.3,0.45,LOW,Model est. -- no market prices defensive TDs,Best return duo; defense contributes nothing
+Titans D/ST,TEN,DST,0.0,0.0,0.0,0.0,0.0,2.3,0.4,LOW,Model est. -- no market prices defensive TDs,Chimere Dike 2 PR TD 2025; pure return play
+New Orleans D/ST,NO,DST,0.0,0.0,0.0,0.0,0.0,2.28,0.45,LOW,Model est. -- no market prices defensive TDs,3 def TD 2025
+Giants D/ST,NYG,DST,0.0,0.0,0.0,0.0,0.0,2.27,0.6,LOW,Model est. -- no market prices defensive TDs,Elite pass rush drives safeties
+Bengals D/ST,CIN,DST,0.0,0.0,0.0,0.0,0.0,2.27,0.45,LOW,Model est. -- no market prices defensive TDs,Charlie Jones KR TD in both 2024 and 2025
+Dolphins D/ST,MIA,DST,0.0,0.0,0.0,0.0,0.0,2.27,0.4,LOW,Model est. -- no market prices defensive TDs,0 def TD in 2024 AND 2025
+Panthers D/ST,CAR,DST,0.0,0.0,0.0,0.0,0.0,2.12,0.45,LOW,Model est. -- no market prices defensive TDs,
+Buccaneers D/ST,TB,DST,0.0,0.0,0.0,0.0,0.0,2.12,0.45,LOW,Model est. -- no market prices defensive TDs,
+Chiefs D/ST,KC,DST,0.0,0.0,0.0,0.0,0.0,2.1,0.5,LOW,Model est. -- no market prices defensive TDs,0 def TD in 2025; low variance
+Eagles D/ST,PHI,DST,0.0,0.0,0.0,0.0,0.0,2.03,0.6,LOW,Model est. -- no market prices defensive TDs,TRAP: great real defense but no return game
+49ers D/ST,SF,DST,0.0,0.0,0.0,0.0,0.0,1.95,0.55,LOW,Model est. -- no market prices defensive TDs,Exactly 1 def TD each of last 3 yrs
+Cardinals D/ST,ARI,DST,0.0,0.0,0.0,0.0,0.0,1.95,0.5,LOW,Model est. -- no market prices defensive TDs,
+Rams D/ST,LAR,DST,0.0,0.0,0.0,0.0,0.0,1.87,0.5,LOW,Model est. -- no market prices defensive TDs,Weak returners
+Lions D/ST,DET,DST,0.0,0.0,0.0,0.0,0.0,1.78,0.45,LOW,Model est. -- no market prices defensive TDs,Only 2 def TD in 3 seasons
+Commanders D/ST,WAS,DST,0.0,0.0,0.0,0.0,0.0,1.77,0.4,LOW,Model est. -- no market prices defensive TDs,1 def TD in 3 years
+Packers D/ST,GB,DST,0.0,0.0,0.0,0.0,0.0,1.7,0.55,LOW,Model est. -- no market prices defensive TDs,0 def TD 2025; poor returner
+Chargers D/ST,LAC,DST,0.0,0.0,0.0,0.0,0.0,1.62,0.5,LOW,Model est. -- no market prices defensive TDs,1 def TD in 3 seasons; 19 INTs to 0 INT TD

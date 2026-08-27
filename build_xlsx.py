@@ -13,6 +13,12 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
+# Imported, not restated. These used to be a second hardcoded copy, which silently
+# went stale the moment rank.py's were retuned: the workbook kept rebuilding with
+# the old factors, so its live adjVOR column disagreed with the ranking that had
+# decided the row order sitting right next to it.
+from rank import RELIABILITY
+
 ROOT = Path(__file__).parent
 BOARD = json.loads((ROOT / "data" / "board.json").read_text())
 PLAYERS = BOARD["players"]
@@ -20,7 +26,6 @@ REPL = BOARD["replacement"]
 
 FONT = "Arial"
 POS_ORDER = ["QB", "RB", "WR", "TE", "K", "DST"]
-RELIABILITY = {"QB": 0.65, "RB": 0.60, "WR": 0.55, "TE": 0.55, "K": 0.35, "DST": 0.20}
 
 HDR_FILL = PatternFill("solid", fgColor="1F3864")
 HDR_FONT = Font(name=FONT, bold=True, color="FFFFFF", size=10)

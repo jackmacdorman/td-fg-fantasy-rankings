@@ -23,12 +23,28 @@ STARTERS = {"QB": 1, "RB": 2, "WR": 2, "TE": 1, "DST": 1, "K": 1}
 # Raw VOR treats every projected point as equally trustworthy, which badly
 # overrates kickers and defenses: their projections have a very high floor but
 # almost no year-over-year predictive power, so most of their apparent spread is
-# noise. These are judgment-based, not fitted from data -- tune them and re-run.
+# noise. Left unshrunk, the K1 drifts into the top 12 of the board.
+#
+# The four skill positions share one number because, since vegas_anchor.py, they
+# share one source: a posted line devigged and inverted through the same Poisson,
+# or failing that a share of the same Vegas team total. There is no longer any
+# reason to trust a running back's level more than a wide receiver's, so the old
+# 0.65 / 0.60 / 0.55 spread has been collapsed. It was judgment, and the judgment
+# it encoded -- that some projection feeds ran hotter than others -- is exactly
+# what the re-anchoring removed.
+#
+# K and DST keep a discount because they are the two things the market does not
+# price. A kicker's field goals are still a projection passed through untouched,
+# and no book posts a defensive touchdown total at all. The discount is now a
+# statement about which tier the data came from rather than a hunch about the
+# position. Its size is still judgment: only the ratio to SKILL matters, and it
+# is set to roughly preserve the previous board's treatment of kickers.
+SKILL = 0.60
 RELIABILITY = {
-    "QB": 0.65,
-    "RB": 0.60,
-    "WR": 0.55,
-    "TE": 0.55,
+    "QB": SKILL,
+    "RB": SKILL,
+    "WR": SKILL,
+    "TE": SKILL,
     "K": 0.35,
     "DST": 0.20,
 }

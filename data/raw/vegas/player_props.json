@@ -1,0 +1,28 @@
+{
+  "_what_this_is": "Season-long player touchdown over/under totals posted by actual sportsbooks for 2026. These override the team-budget allocation in vegas_anchor.py. The posted line is used as the point estimate with no adjustment applied -- a line IS the market's number, and shading it would reintroduce exactly the judgment layer this rebuild exists to remove.",
+  "_excluded_on_purpose": [
+    "'Odds to lead the NFL in rushing TDs' futures (Gibbs +500, Jacobs +900, Barkley +1600). These price the probability of a league-leading finish, not an expected touchdown total, and converting one into the other requires assuming a distribution shape. That is the assumption Jack asked to remove.",
+    "Kalshi prediction-market implied totals. No volume, ~40-cent spreads, and non-monotonic ladders."
+  ],
+  "_collected": "2026-08-27",
+  "props": [
+    {"name": "Derrick Henry",        "market": "rush_td", "line": 12.5, "book": "DraftKings"},
+    {"name": "Jonathan Taylor",      "market": "rush_td", "line": 11.5, "book": "DraftKings"},
+    {"name": "James Cook III",       "market": "rush_td", "line": 10.5, "book": "SportsbookReview/Sharp"},
+    {"name": "Kyren Williams",       "market": "rush_td", "line": 9.5,  "book": "SportsbookReview/Sharp"},
+    {"name": "Javonte Williams",     "market": "rush_td", "line": 9.5,  "book": "FantasyTeamAdvice"},
+    {"name": "David Montgomery",     "market": "rush_td", "line": 7.5,  "book": "Sharp Football/FTA"},
+    {"name": "Chase Brown",          "market": "rush_td", "line": 5.5,  "book": "Sharp Football"},
+    {"name": "De'Von Achane",        "market": "rush_td", "line": 5.5,  "book": "FantasyTeamAdvice"},
+    {"name": "Jordan Mason",         "market": "rush_td", "line": 4.5,  "book": "Yahoo Sports"},
+
+    {"name": "Jahmyr Gibbs",         "market": "rec_td",  "line": 4.5,  "book": "StatementGames/Yahoo"},
+    {"name": "Christian McCaffrey",  "market": "rec_td",  "line": 4.5,  "book": "StatementGames/Yahoo"},
+    {"name": "Bijan Robinson",       "market": "rec_td",  "line": 3.5,  "book": "StatementGames/Yahoo"},
+
+    {"name": "Josh Allen",           "market": "pass_td", "line": 24.5, "book": "consensus"},
+    {"name": "Dak Prescott",         "market": "pass_td", "line": 27.5, "book": "consensus"},
+    {"name": "Justin Herbert",       "market": "pass_td", "line": 22.5, "book": "consensus"},
+    {"name": "C.J. Stroud",          "market": "pass_td", "line": 22.5, "book": "consensus"}
+  ]
+}
