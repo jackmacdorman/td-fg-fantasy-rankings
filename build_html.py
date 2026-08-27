@@ -70,6 +70,12 @@ HTML = """<!DOCTYPE html>
   --bg:#0f1420; --panel:#182031; --line:#2a3448; --txt:#e6ebf5; --dim:#8492ad;
   --accent:#4c9aff; --gone:#4a5568;
   --QB:#ff8a5c; --RB:#5ad18f; --WR:#5ab0ff; --TE:#ffd166; --K:#b9c2d0; --DST:#c08cf0;
+  /* Magenta rather than a salmon pink, because the palette already spends the
+     warm-red end on things that mean something else: #ff5a68 strikes a player
+     off and #ff9aa2 marks a LOW confidence projection. A flag must not read as
+     either. It is also clear of QB orange, the one position it can be lit
+     alongside without either being a mistake. */
+  --flag:#ff77c8;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--txt);
@@ -90,15 +96,16 @@ button.on{background:var(--accent);border-color:var(--accent);color:#06101f;font
 /* An active position filter takes that position's own colour, so the pill you
    pressed matches the pills in the Pos column -- green for RB, orange for QB.
    With multi-select this is what makes a two-position selection readable at a
-   glance. ALL and the star keep the neutral blue: they are not positions and
-   should not borrow a position's meaning. The dark text is inherited from
-   button.on and is the same choice .pos makes over these same six fills. */
+   glance. The star gets pink, matching the lit stars in the rows it filters to.
+   Only ALL keeps the neutral blue. The dark text is inherited from button.on
+   and is the same choice .pos makes over these same fills. */
 #filters button.on[data-p="QB"]{background:var(--QB);border-color:var(--QB)}
 #filters button.on[data-p="RB"]{background:var(--RB);border-color:var(--RB)}
 #filters button.on[data-p="WR"]{background:var(--WR);border-color:var(--WR)}
 #filters button.on[data-p="TE"]{background:var(--TE);border-color:var(--TE)}
 #filters button.on[data-p="K"]{background:var(--K);border-color:var(--K)}
 #filters button.on[data-p="DST"]{background:var(--DST);border-color:var(--DST)}
+#filters button.on[data-p="FLAG"]{background:var(--flag);border-color:var(--flag)}
 .filters{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px;align-items:center}
 .avail{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
 .chip{background:#0d121c;border:1px solid var(--line);border-radius:6px;
@@ -190,11 +197,11 @@ tr.mine .mineBtn{border-color:#5ad18f;color:#5ad18f}
    Transparent border, not none, so starring does not shift the row by a pixel. */
 .starBtn{background:transparent;border:1px solid transparent;color:#39435a;
   padding:0 3px;font-size:14px;line-height:1.1;border-radius:4px}
-.starBtn:hover{background:transparent;color:#ffd166}
-/* button.on is the filter-pill rule -- solid blue fill, blue border. It matches
-   a lit star too, so every property it sets has to be put back, not just the
-   colour. A starred row was rendering with a blue chip around the glyph. */
-.starBtn.on{color:#ffd166;background:transparent;border-color:transparent;font-weight:400}
+.starBtn:hover{background:transparent;color:var(--flag)}
+/* button.on is the filter-pill rule -- solid fill and a border. It matches a lit
+   star too, so every property it sets has to be put back, not just the colour.
+   A starred row was rendering with a blue chip around the glyph. */
+.starBtn.on{color:var(--flag);background:transparent;border-color:transparent;font-weight:400}
 #roster{margin-top:10px;font-size:12px;color:var(--dim);display:flex;gap:12px;flex-wrap:wrap}
 #roster span b{color:var(--txt)}
 .empty{padding:40px;text-align:center;color:var(--dim)}
