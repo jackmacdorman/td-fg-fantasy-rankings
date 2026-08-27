@@ -174,6 +174,35 @@ tr.mine .mineBtn{border-color:#5ad18f;color:#5ad18f}
 #roster{margin-top:10px;font-size:12px;color:var(--dim);display:flex;gap:12px;flex-wrap:wrap}
 #roster span b{color:var(--txt)}
 .empty{padding:40px;text-align:center;color:var(--dim)}
+/* The button sits beside #roster rather than inside it, because render() calls
+   replaceChildren() on #roster every pass and would delete it. */
+.rosterRow{display:flex;align-items:center;gap:12px}
+#teamBtn{margin-left:auto;border-color:#2f6b4a;color:#7ee2a8;white-space:nowrap}
+#teamBtn:hover{border-color:#5ad18f;color:#5ad18f}
+.modalBack{position:fixed;inset:0;background:rgba(6,9,16,.75);z-index:50;
+  display:flex;align-items:flex-start;justify-content:center;padding:36px 14px;overflow:auto}
+.modalBack[hidden]{display:none}
+.modal{background:#141b29;border:1px solid #2a3446;border-radius:10px;
+  width:min(620px,100%);box-shadow:0 24px 70px rgba(0,0,0,.55)}
+.modal h2{margin:0;font-size:14px;padding:13px 16px;border-bottom:1px solid #232c3d;
+  display:flex;align-items:center;gap:10px}
+.modal .x{margin-left:auto;background:transparent;border:1px solid var(--line);
+  color:var(--dim);border-radius:4px;padding:2px 9px;font-size:12px;cursor:pointer}
+.modal .x:hover{color:var(--txt);border-color:#48566f}
+.secHdr{padding:7px 16px;font-size:10.5px;letter-spacing:.6px;color:#6f7d97;
+  background:#111827;text-transform:uppercase;font-weight:700;
+  display:flex;align-items:center;gap:8px}
+.secHdr .tot{margin-left:auto;color:#aebbd1;letter-spacing:0}
+.slot{display:flex;align-items:center;gap:8px;padding:7px 16px;
+  border-bottom:1px solid #1d2536;font-size:13px}
+.slot .lbl{width:38px;flex:none;color:#6f7d97;font-size:10.5px;font-weight:700}
+.slot .who{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.slot .sp{margin-left:auto}
+.slot .n1{font-variant-numeric:tabular-nums;font-weight:700;min-width:52px;text-align:right}
+.slot .n2{font-variant-numeric:tabular-nums;color:#aebbd1;min-width:52px;text-align:right}
+.slot.gap .who{color:#4a5568;font-style:italic;font-weight:400}
+.modal .foot{padding:10px 16px;font-size:12px;color:var(--dim);
+  border-top:1px solid #232c3d;display:flex;gap:8px;align-items:center}
 </style>
 </head>
 <body>
@@ -189,7 +218,10 @@ tr.mine .mineBtn{border-color:#5ad18f;color:#5ad18f}
   </div>
   <div class="filters" id="filters"></div>
   <div class="avail" id="avail"></div>
-  <div id="roster"></div>
+  <div class="rosterRow">
+    <div id="roster"></div>
+    <button id="teamBtn" title="Show my starting lineup and bench">My Team</button>
+  </div>
 </header>
 <main>
   <table>
@@ -208,6 +240,14 @@ tr.mine .mineBtn{border-color:#5ad18f;color:#5ad18f}
   </table>
   <div class="empty" id="empty" hidden>No players match.</div>
 </main>
+<div class="modalBack" id="teamBack" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-label="My Team">
+    <h2>My Team <span class="sub" id="teamCount"></span>
+      <button class="x" id="teamX">Close</button></h2>
+    <div id="teamBody"></div>
+    <div class="foot" id="teamFoot"></div>
+  </div>
+</div>
 <script>
 const P = __DATA__, META = __META__;
 const KEY = "tdfg2026";
@@ -294,6 +334,69 @@ function toggle(name, asMine){
   save(); render();
 }
 
+// ---- My Team -------------------------------------------------------------
+// Starters are filled in the order players were drafted: the first RB taken
+// holds RB1, the second RB2, and a third RB goes to the bench however good he
+// is. `mine` is a Set, and Set iteration order is insertion order, which is
+// draft order -- and it survives the localStorage round trip because it is
+// stored as an array. Re-drafting a player after undrafting him moves him to
+// the end, which is correct: that is when he was actually taken.
+const posLabel = p => p==="DST" ? "D/ST" : p;
+
+function buildTeam(){
+  const filled={}; POS.forEach(p=>filled[p]=0);
+  const starters=[], bench=[];
+  [...mine].forEach(n=>{
+    const pl=P.find(x=>x.n===n); if(!pl) return;
+    if(filled[pl.p] < META.starters[pl.p]){ filled[pl.p]++; starters.push(pl); }
+    else bench.push(pl);
+  });
+  // Lay the starters out in roster order with the unfilled slots left visible,
+  // so the panel answers "what do I still need?" and not just "who do I have?".
+  const slots=[];
+  POS.forEach(p=>{
+    const inPos=starters.filter(x=>x.p===p);
+    for(let i=0;i<META.starters[p];i++) slots.push({p, pl:inPos[i]||null});
+  });
+  return {slots, starters, bench};
+}
+
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+
+function slotHTML(p, pl){
+  const lbl=`<span class="lbl">${posLabel(p)}</span>`;
+  if(!pl) return `<div class="slot gap">${lbl}<span class="who">— empty —</span></div>`;
+  const a25 = pl.e25===null ? "&mdash;" : pl.e25.toFixed(1);
+  return `<div class="slot">${lbl}`+
+    `<span class="pos" style="background:var(--${pl.p})">${pl.pr}</span>`+
+    `<span class="who">${esc(pl.n)} <span class="tm">${pl.t}</span></span>`+
+    `<span class="sp"></span><span class="n1">${pl.pts.toFixed(1)}</span>`+
+    `<span class="n2" title="2025 rate x18 games">${a25}</span></div>`;
+}
+
+function renderTeam(){
+  const {slots, starters, bench}=buildTeam();
+  const sum=a=>a.reduce((t,x)=>t+x.pts,0);
+  const need=POS.reduce((t,p)=>t+META.starters[p],0);
+  document.getElementById("teamCount").textContent =
+    `${starters.length}/${need} starters · ${bench.length} bench`;
+  let h=`<div class="secHdr">Starting lineup<span class="tot">`+
+        `${sum(starters).toFixed(1)} pts</span></div>`;
+  h+=slots.map(s=>slotHTML(s.p, s.pl)).join("");
+  h+=`<div class="secHdr">Bench<span class="tot">${sum(bench).toFixed(1)} pts</span></div>`;
+  h+= bench.length ? bench.map(pl=>slotHTML(pl.p, pl)).join("")
+                   : `<div class="slot gap"><span class="who">nobody on the bench yet</span></div>`;
+  document.getElementById("teamBody").innerHTML=h;
+  document.getElementById("teamFoot").textContent =
+    `Filled in draft order. Columns are 2026 projected points and 2025 points.`;
+}
+
+const teamBack=document.getElementById("teamBack");
+const showTeam=v=>{ if(v) renderTeam(); teamBack.hidden=!v; };
+document.getElementById("teamBtn").onclick=()=>showTeam(true);
+document.getElementById("teamX").onclick=()=>showTeam(false);
+teamBack.onclick=e=>{ if(e.target===teamBack) showTeam(false); };
+
 document.getElementById("undo").onclick=()=>{
   const last=log.pop(); if(!last) return;
   last.wasGone?gone.add(last.name):gone.delete(last.name);
@@ -317,7 +420,12 @@ document.querySelectorAll("th[data-k]").forEach(th=>{
 });
 document.addEventListener("keydown",e=>{
   if(e.key==="/"&&document.activeElement.id!=="q"){e.preventDefault();document.getElementById("q").focus();}
-  if(e.key==="Escape"){document.getElementById("q").value="";query="";render();}
+  // Escape closes the panel first and stops there, rather than also wiping the
+  // search box underneath it -- one key should undo one thing.
+  if(e.key==="Escape"){
+    if(!teamBack.hidden){ showTeam(false); return; }
+    document.getElementById("q").value="";query="";render();
+  }
 });
 
 function render(){
@@ -380,6 +488,10 @@ function render(){
   const s=document.createElement("span");
   s.innerHTML=`Projected starters+bench total <b>${pts.toFixed(0)}</b> pts`;
   rEl.appendChild(s);
+
+  // Undo, Reset and the best-available chips can all change the roster while the
+  // panel is open, so keep it live rather than showing a stale snapshot.
+  if(!teamBack.hidden) renderTeam();
 }
 render();
 </script>
