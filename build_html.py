@@ -103,9 +103,29 @@ th.sorted::after{content:" \\25BC";font-size:8px}
 td{padding:6px 8px;border-bottom:1px solid #1d2536;vertical-align:top}
 tr.row{cursor:pointer}
 tr.row:hover td{background:#1b2333}
-tr.gone td{color:var(--gone)}
-tr.gone .nm{text-decoration:line-through}
-tr.mine td{background:#132a1e}
+/* A drafted player used to be dim grey with a strike through his name only, which
+   at arm's length read as "slightly quieter row" rather than "gone" -- and the
+   whole job of this board mid-draft is answering "is he still there?" in one
+   glance. Now the strike runs through every cell and the row turns red.
+   Colours are listed explicitly rather than via a descendant wildcard, because
+   the position and confidence pills draw dark text on a bright fill and would be
+   made illegible by inheriting the red. They get dimmed instead. */
+tr.gone:not(.mine) td,
+tr.gone:not(.mine) td.cat,
+tr.gone:not(.mine) .nm,
+tr.gone:not(.mine) .tm,
+tr.gone:not(.mine) .zero,
+tr.gone:not(.mine) .note,
+tr.gone:not(.mine) .conf{color:#ff5a68}
+tr.gone td{text-decoration:line-through;text-decoration-thickness:2px}
+tr.gone:not(.mine) td{text-decoration-color:#ff5a68}
+tr.gone:not(.mine) td:first-child{box-shadow:inset 3px 0 0 #ff5a68}
+tr.gone .pos,tr.gone .badge{opacity:.4}
+tr.gone:not(.mine):hover td{background:#2a1a1f}
+/* My own picks are also "off the board", so they match .gone unless excluded.
+   They are the opposite kind of news and must not read as a loss -- struck
+   through, but in the roster green rather than the taken-by-someone-else red. */
+tr.mine td{background:#132a1e;text-decoration-color:#5ad18f}
 tr.mine:hover td{background:#183524}
 .pos{display:inline-block;min-width:34px;text-align:center;border-radius:4px;
   padding:1px 5px;font-size:11px;font-weight:700;color:#0c1220}
