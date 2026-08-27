@@ -17,6 +17,18 @@ Roster: 1 QB, 2 RB, 2 WR, 1 TE, 1 K, 1 D/ST · 12 teams.
 
 ## Output
 
+**`draft-board.html`** — single self-contained file for use *during* the draft. Click a
+row to cross a player off; the ✓ button assigns him to your roster instead. State lives
+in localStorage, so a reload or an accidental tab close doesn't lose the draft. Undo,
+reset, hide-drafted, position filters, search (`/` to focus), sortable columns, a
+best-available chip per position, and a roster tracker counting your picks against the
+starting requirements.
+
+The **★ Flagged** filter is the one worth knowing about. Sleepers in this format tend to
+rank badly on the board itself — Sean Tucker is #263 — because a low projected TD total
+is exactly what makes a player cheap. Scrolling will never surface them mid-draft; the
+filter will.
+
 **`2026 TD-FG League Draft Board.xlsx`** — 12 tabs: overall board, one per position,
 plus Strategy, Sleepers, Traps, Sources, and Settings.
 
@@ -55,7 +67,11 @@ python3 fetch_espn.py WR TE     # pull ESPN 2026 projections
 python3 merge_wr_te.py          # merge with FFToday into consensus
 python3 rank.py --teams 12      # score + rank -> data/board.json
 python3 build_xlsx.py           # render the workbook
+python3 build_html.py           # render draft-board.html
 ```
+
+`build_html.py` imports the Sleepers and Traps lists from `build_xlsx.py` so the two
+outputs can't drift apart — edit the notes in one place.
 
 `data/players.csv` is the combined input, concatenated from the per-position files.
 Edit it directly and re-run `rank.py` to adjust projections.
