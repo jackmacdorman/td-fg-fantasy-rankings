@@ -272,7 +272,7 @@ function makeRow(pl){
     <td class="num cat">${stat(pl.xp)}</td>
     <td><span class="conf ${pl.c}">${pl.c}</span></td>
     <td class="note" title="${noteAttr}">${badge}${note}</td>
-    <td><button class="mineBtn" title="Draft to my team">mine</button></td>`;
+    <td><button class="mineBtn" title="Draft to my team">Draft</button></td>`;
   tr.onclick=e=>{
     if(e.target.classList.contains("mineBtn")){
       toggle(pl.n, true); e.stopPropagation();

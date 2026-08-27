@@ -21,7 +21,7 @@ Roster: 1 QB, 2 RB, 2 WR, 1 TE, 1 K, 1 D/ST · 12 teams.
 
 **`index.html`** (also written as `draft-board.html`) — single self-contained file for use
 *during* the draft, published to GitHub Pages at the link above. Click a
-row to cross a player off; the ✓ button assigns him to your roster instead. State lives
+row to cross a player off; the **Draft** button assigns him to your roster instead. State lives
 in localStorage, so a reload or an accidental tab close doesn't lose the draft. Undo,
 reset, hide-drafted, position filters, search (`/` to focus), sortable columns, a
 best-available chip per position, and a roster tracker counting your picks against the
