@@ -127,7 +127,7 @@ tr.gone:not(.mine) .conf{color:#ff5a68}
 tr.gone td{position:relative}
 tr.gone td::after{content:"";position:absolute;left:0;right:0;top:calc(50% - 1px);
   height:2px;pointer-events:none;background:#ff5a68}
-tr.gone .pos,tr.gone .badge{opacity:.4}
+tr.gone .pos{opacity:.4}
 tr.gone:not(.mine):hover td{background:#2a1a1f}
 /* My own picks are also "off the board", so they match .gone unless excluded.
    They are the opposite kind of news and must not read as a loss -- struck
@@ -157,14 +157,10 @@ th.cat{color:#6f7d97}
    running. The text is still there, in the title attribute. */
 .note{color:var(--dim);font-size:12px;max-width:min(46vw,560px);
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.badge{font-size:9.5px;font-weight:700;letter-spacing:.4px;padding:1px 5px;
-  border-radius:3px;margin-right:6px;vertical-align:1px}
-.badge.sleeper{background:#1c4a2e;color:#7ee2a8}
-.badge.trap{background:#4d1f24;color:#ff9aa2}
-/* Flagged players can sit deep in the board (Sean Tucker is ~#263), so give the
-   row a left accent that is visible while scrolling past. */
-tr.t-sleeper td:first-child{box-shadow:inset 3px 0 0 #7ee2a8}
-tr.t-trap td:first-child{box-shadow:inset 3px 0 0 #ff9aa2}
+/* Sleepers and traps carry no per-row badge or accent bar. They read as a
+   verdict on a player the board has already ranked, and 288 rows of them turn
+   into visual noise you stop seeing by the second round. The star filter is the
+   way to reach them, and their reasoning still fills the Notes cell. */
 .conf{font-size:10.5px;letter-spacing:.3px}
 .LOW{color:#ff9aa2}.MEDIUM{color:#ffd166}.HIGH{color:#7ee2a8}
 .mineBtn{background:transparent;border:1px solid var(--line);color:var(--dim);
@@ -281,8 +277,7 @@ const rows = new Map();
 
 function makeRow(pl){
   const tr=document.createElement("tr");
-  tr.className="row" + (pl.tag?` t-${pl.tag}`:"");
-  const badge = pl.tag?`<span class="badge ${pl.tag}">${pl.tag.toUpperCase()}</span>`:"";
+  tr.className="row";
   const note = pl.tagwhy || pl.note || "";
   // Clipped to one line in CSS, so the full text has to live somewhere reachable.
   const noteAttr = note.replace(/"/g, "&quot;");
@@ -311,7 +306,7 @@ function makeRow(pl){
     <td class="num cat">${stat(pl.fg)}</td>
     <td class="num cat">${stat(pl.xp)}</td>
     <td><span class="conf ${pl.c}">${pl.c}</span></td>
-    <td class="note" title="${noteAttr}">${badge}${note}</td>
+    <td class="note" title="${noteAttr}">${note}</td>
     <td><button class="mineBtn" title="Draft to my team">Draft</button></td>`;
   tr.onclick=e=>{
     if(e.target.classList.contains("mineBtn")){

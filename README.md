@@ -30,7 +30,9 @@ starting requirements.
 The **★ Flagged** filter is the one worth knowing about. Sleepers in this format tend to
 rank badly on the board itself — Sean Tucker is #265 — because a low projected TD total
 is exactly what makes a player cheap. Scrolling will never surface them mid-draft; the
-filter will.
+filter will. Individual rows carry no sleeper/trap badge or accent bar: over 288 rows the
+markers became decoration you stop seeing, and the filter reaches the same 17 players
+deliberately. The reasoning still fills each flagged player's Notes cell.
 
 **`2026 TD-FG League Draft Board.xlsx`** — 12 tabs: overall board, one per position,
 plus Strategy, Sleepers, Traps, Sources, and Settings.
