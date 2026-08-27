@@ -106,6 +106,19 @@ button.on{background:var(--accent);border-color:var(--accent);color:#06101f;font
 #filters button.on[data-p="K"]{background:var(--K);border-color:var(--K)}
 #filters button.on[data-p="DST"]{background:var(--DST);border-color:var(--DST)}
 #filters button.on[data-p="FLAG"]{background:var(--flag);border-color:var(--flag)}
+/* ALL is not a position, it is all six, so it wears all six as hard-edged bands
+   in roster order rather than borrowing one colour or falling back to a neutral
+   that says nothing. No pink in it: the flag is a separate axis and no part of
+   what ALL means. (The two are never lit together anyway -- cmd-clicking the
+   star drops ALL, and the star on its own already means every position.)
+   Hard stops, not a blend, because six blended hues turn to mud at 47px wide.
+   The border goes transparent so the bands run to the pill's edge; the same
+   dark text still clears every one of the six fills. */
+#filters button.on[data-p="ALL"]{
+  background:linear-gradient(105deg,
+    var(--QB) 0 16.67%, var(--RB) 0 33.33%, var(--WR) 0 50%,
+    var(--TE) 0 66.67%, var(--K) 0 83.33%, var(--DST) 0 100%);
+  border-color:transparent}
 .filters{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px;align-items:center}
 .avail{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
 .chip{background:#0d121c;border:1px solid var(--line);border-radius:6px;
